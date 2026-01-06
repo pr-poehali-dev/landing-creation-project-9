@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +34,64 @@ const Index = () => {
             <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
           </div>
           <Button className="hidden md:block">Записаться</Button>
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="md:hidden"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <Icon name={mobileMenuOpen ? "X" : "Menu"} size={24} />
+          </Button>
         </nav>
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t animate-fade-in">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
+              <a 
+                href="#home" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Главная
+              </a>
+              <a 
+                href="#about" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                О проекте
+              </a>
+              <a 
+                href="#program" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Программа
+              </a>
+              <a 
+                href="#gallery" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Галерея
+              </a>
+              <a 
+                href="#reviews" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Отзывы
+              </a>
+              <a 
+                href="#contacts" 
+                className="hover:text-primary transition-colors py-2"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Контакты
+              </a>
+              <Button className="w-full" onClick={() => setMobileMenuOpen(false)}>Записаться</Button>
+            </div>
+          </div>
+        )}
       </header>
 
       <section id="home" className="pt-32 pb-20 px-4 bg-gradient-to-br from-primary/10 via-secondary/10 to-accent/10">
