@@ -246,9 +246,9 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: 'Shield', title: 'Гарантия возврата', description: 'Если не подойдёт формат – вернём деньги' },
+              { icon: 'Award', title: 'Результат гарантируем', description: 'Спикер — эксперт с 12-летним опытом' },
               { icon: 'Users', title: 'Нетворкинг', description: 'Знакомства с единомышленниками' },
-              { icon: 'Headphones', title: 'Поддержка 24/7', description: 'Чат поддержки и после кэмпа' }
+              { icon: 'Headphones', title: 'Поддержка', description: 'Чат поддержки и после кэмпа' }
             ].map((item, index) => (
               <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl shadow-lg group hover:scale-105 transition-transform cursor-pointer">
                 <CardContent className="p-6 flex items-start gap-4">
