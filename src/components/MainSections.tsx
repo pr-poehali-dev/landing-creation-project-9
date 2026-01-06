@@ -49,7 +49,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               <CardContent className="p-8 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Icon name="Lightbulb" size={24} className="text-secondary" />
+                    <Icon name="Sun" size={24} className="text-secondary" />
                   </div>
                   <h3 className="text-2xl font-bold text-secondary">Решение</h3>
                 </div>
@@ -86,7 +86,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { 
-                icon: 'Clock', 
+                icon: 'Waves', 
                 title: '10-20 часов в неделю', 
                 subtitle: 'Экономия времени',
                 description: 'Сократите рутину за счёт AI-ассистентов и автоматизации', 
@@ -94,7 +94,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 stat: '↓ 50% рутины'
               },
               { 
-                icon: 'TrendingUp', 
+                icon: 'Sun', 
                 title: '3-4x доход', 
                 subtitle: 'Рост заработка',
                 description: 'Превратите AI-навыки в монетизацию: новые проекты и продукты', 
@@ -110,7 +110,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 stat: '∞ применений'
               },
               { 
-                icon: 'Zap', 
+                icon: 'Sparkles', 
                 title: 'Адаптивность', 
                 subtitle: 'Гибкость в изменениях',
                 description: 'ИИ – ваш усилитель для быстрой адаптации к новым вызовам', 
@@ -165,17 +165,17 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
 
               <div className="grid sm:grid-cols-3 gap-4 p-6 rounded-xl bg-muted/30">
                 <div className="text-center">
-                  <Icon name="BookOpen" size={32} className="text-primary mx-auto mb-2" />
+                  <Icon name="Sparkles" size={32} className="text-primary mx-auto mb-2" />
                   <p className="text-2xl font-bold">7</p>
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
                 </div>
                 <div className="text-center">
-                  <Icon name="Target" size={32} className="text-secondary mx-auto mb-2" />
+                  <Icon name="Sun" size={32} className="text-secondary mx-auto mb-2" />
                   <p className="text-2xl font-bold">100%</p>
                   <p className="text-sm text-muted-foreground">Практика</p>
                 </div>
                 <div className="text-center">
-                  <Icon name="Rocket" size={32} className="text-accent mx-auto mb-2" />
+                  <Icon name="Palmtree" size={32} className="text-accent mx-auto mb-2" />
                   <p className="text-2xl font-bold">4</p>
                   <p className="text-sm text-muted-foreground">Дня интенсива</p>
                 </div>
@@ -183,17 +183,17 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
 
               <div className="space-y-4">
                 <h4 className="text-2xl font-bold flex items-center gap-2">
-                  <Icon name="Package" size={24} className="text-primary" />
+                  <Icon name="Waves" size={24} className="text-primary" />
                   Что вы создадите
                 </h4>
                 <div className="grid gap-3">
                   {[
-                    { icon: 'Brain', title: 'Второй мозг и умная база знаний', description: 'Структурированное хранилище идей и решений с доступом за секунды' },
+                    { icon: 'Cpu', title: 'Второй мозг и умная база знаний', description: 'Структурированное хранилище идей и решений с доступом за секунды' },
                     { icon: 'Bot', title: 'Персональный AI-ассистент', description: 'От личных дневников до бизнес-аналитики и документов' },
                     { icon: 'GraduationCap', title: 'ИИ-преподаватель для любых дисциплин', description: 'Настраиваемые туторы под ваш уровень и темп обучения' },
                     { icon: 'Globe', title: 'Сайты и лендинги без кода', description: 'Собирайте веб-страницы с помощью ИИ за минуты' },
                     { icon: 'MessageSquare', title: 'Мастерство prompt-инженерии', description: 'Управление контекстом, выбор моделей, цепочки запросов' },
-                    { icon: 'Camera', title: 'Нейро-фотосессии топ-уровня', description: 'Визуалы дороже стоковых решений для вашего бренда' },
+                    { icon: 'Sparkles', title: 'Нейро-фотосессии топ-уровня', description: 'Визуалы дороже стоковых решений для вашего бренда' },
                     { icon: 'Presentation', title: 'Презентации от 50 000 ₽', description: 'Продающие PPT для клиентов и своих запусков' }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-all group cursor-pointer border border-transparent hover:border-primary/30">
@@ -231,7 +231,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                   </div>
                   <div className="flex flex-col gap-3 w-full lg:w-auto">
                     <Button size="lg" onClick={() => onOpenForm('module01')} className="bg-primary hover:bg-primary/90 pulse-glow w-full lg:w-auto group">
-                      <Icon name="Rocket" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
+                      <Icon name="Waves" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
                       Забронировать за 50 000 ₽
                     </Button>
                     <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 w-full lg:w-auto">
@@ -331,7 +331,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 <h3 className="text-2xl font-bold">MODULE_01 :: HUMAN + AI</h3>
                 <p className="text-muted-foreground">4 дня интенсивной работы над вашим личным AI-стеком</p>
                 <div className="flex items-center gap-2 text-accent">
-                  <Icon name="Clock" size={16} />
+                  <Icon name="Sun" size={16} />
                   <span className="text-sm font-semibold">Старт 24 июня · Осталось {placesLeft} мест</span>
                 </div>
                 <Button className="w-full bg-primary hover:bg-primary/90 group-hover:pulse-glow">
@@ -343,7 +343,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               <CardContent className="p-8 space-y-6">
                 <div className="flex justify-between items-start">
                   <Badge variant="outline" className="border-secondary text-secondary">СКОРО</Badge>
-                  <Icon name="Bell" size={24} className="text-secondary group-hover:animate-pulse" />
+                  <Icon name="Sparkles" size={24} className="text-secondary group-hover:animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold">MODULE_02 :: VIBE MARKETING</h3>
                 <p className="text-muted-foreground">Маркетинг, креатив и коммуникации, усиленные ИИ</p>

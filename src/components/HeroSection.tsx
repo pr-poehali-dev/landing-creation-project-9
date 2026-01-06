@@ -24,7 +24,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" onClick={() => onOpenForm('module01')} className="text-lg bg-primary hover:bg-primary/90 pulse-glow group">
-              <Icon name="Zap" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
+              <Icon name="Waves" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
               Записаться на MODULE_01
             </Button>
             <Button size="lg" variant="outline" className="text-lg border-secondary text-secondary hover:bg-secondary/10">
@@ -38,7 +38,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12">
             <Card className="neon-border bg-card/30 backdrop-blur-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Calendar" size={32} className="text-primary" />
+                <Icon name="Sun" size={32} className="text-secondary" />
                 <p className="font-semibold">24–27 июня 2026</p>
                 <p className="text-sm text-muted-foreground">4 дня и 3 ночи</p>
               </CardContent>
@@ -52,7 +52,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
             </Card>
             <Card className="neon-border bg-card/30 backdrop-blur-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Sparkles" size={32} className="text-secondary" />
+                <Icon name="Palmtree" size={32} className="text-accent" />
                 <p className="font-semibold">Практический формат</p>
                 <p className="text-sm text-muted-foreground">Без воды и теории</p>
               </CardContent>
