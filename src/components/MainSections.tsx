@@ -444,9 +444,9 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                   <div className="flex items-start gap-3">
                     <Icon name="Star" size={20} className="text-secondary flex-shrink-0 animate-pulse mt-0.5" />
                     <div>
-                      <h4 className="font-bold text-secondary mb-1 text-sm sm:text-base">Всё включено. Буквально всё:</h4>
-                      <p className="text-xs sm:text-sm text-foreground">
-                        Развлечения, баня, шашлыки, проживание и трёхразовое питание каждый день. Честно говоря, мы сами доплачиваем, лишь бы вы приехали)) Это не та ситуация, где нужно думать — просто берите и наслаждайтесь.
+                      <h4 className="font-bold text-secondary mb-2 text-sm sm:text-base">Если смотреть честно, предложение неадекватно выгодное.</h4>
+                      <p className="text-xs sm:text-sm text-foreground leading-relaxed">
+                        Всё уже включено: и программа, и баня, и шашлыки, и проживание, и питание. Мы заморочились и сделали формат «приехал — и больше ни о чём не думаешь». Именно поэтому тянуть с оплатой — самое дорогое решение, которое вы можете принять.
                       </p>
                     </div>
                   </div>
