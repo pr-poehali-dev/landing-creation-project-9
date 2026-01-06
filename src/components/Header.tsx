@@ -10,7 +10,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/80 border-b border-primary/20">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-card/90 border-b border-primary/20 shadow-lg">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold">
           <span className="text-primary glow-text">пИИонерский</span>
@@ -34,7 +34,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
         </Button>
       </nav>
       {mobileMenuOpen && (
-        <div className="md:hidden backdrop-blur-xl bg-background/90 border-t border-primary/20 animate-fade-in">
+        <div className="md:hidden backdrop-blur-xl bg-card/95 border-t border-primary/20 animate-fade-in shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             <a href="#program" className="hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Программа</a>
             <a href="#benefits" className="hover:text-secondary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Преимущества</a>

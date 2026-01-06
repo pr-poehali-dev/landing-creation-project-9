@@ -41,7 +41,14 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="gradient-mesh grid-pattern fixed inset-0 z-0" />
+      <div className="fixed inset-0 z-0">
+        <img 
+          src="https://cdn.poehali.dev/projects/0c6e3721-7d9f-4d23-a289-2455cad00bee/files/0225e313-ee53-4f81-aa1b-4a8dfd6478c6.jpg" 
+          alt="Beach background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-background/40 backdrop-blur-[2px]" />
+      </div>
       
       <div className="relative z-10">
         <Header onOpenForm={openForm} />

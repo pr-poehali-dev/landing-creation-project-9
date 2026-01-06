@@ -36,21 +36,21 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12">
-            <Card className="neon-border bg-card/30 backdrop-blur-xl">
+            <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
                 <Icon name="Sun" size={32} className="text-secondary" />
                 <p className="font-semibold">24–27 июня 2026</p>
                 <p className="text-sm text-muted-foreground">4 дня и 3 ночи</p>
               </CardContent>
             </Card>
-            <Card className="neon-border bg-card/30 backdrop-blur-xl pulse-glow">
+            <Card className="neon-border bg-card/95 backdrop-blur-xl pulse-glow shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
                 <Icon name="Users" size={32} className="text-accent" />
                 <p className="font-semibold text-accent">Осталось {placesLeft} мест</p>
                 <p className="text-sm text-muted-foreground">из 25 мест</p>
               </CardContent>
             </Card>
-            <Card className="neon-border bg-card/30 backdrop-blur-xl">
+            <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
                 <Icon name="Palmtree" size={32} className="text-accent" />
                 <p className="font-semibold">Практический формат</p>

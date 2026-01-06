@@ -21,7 +21,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="neon-border bg-card/50 backdrop-blur-xl animate-scale-in">
+            <Card className="neon-border bg-card/95 backdrop-blur-xl animate-scale-in shadow-xl">
               <CardContent className="p-8 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
@@ -45,7 +45,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               </CardContent>
             </Card>
 
-            <Card className="neon-border bg-card/50 backdrop-blur-xl animate-scale-in shimmer">
+            <Card className="neon-border bg-card/95 backdrop-blur-xl animate-scale-in shimmer shadow-xl">
               <CardContent className="p-8 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
@@ -118,7 +118,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 stat: '⚡ 2x скорость'
               }
             ].map((item, index) => (
-              <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer">
+              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer shadow-xl">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex justify-between items-start">
                     <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all`}>
@@ -149,7 +149,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
             </h2>
           </div>
           
-          <Card className="neon-border bg-card/50 backdrop-blur-xl mb-8">
+          <Card className="neon-border bg-card/95 backdrop-blur-xl mb-8 shadow-xl">
             <CardContent className="p-8 md:p-12 space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-primary/20 text-primary border-primary/50">MODULE_01 :: HUMAN + AI</Badge>
@@ -250,7 +250,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               { icon: 'Users', title: 'Нетворкинг', description: 'Знакомства с единомышленниками' },
               { icon: 'Headphones', title: 'Поддержка 24/7', description: 'Чат поддержки и после кэмпа' }
             ].map((item, index) => (
-              <Card key={index} className="neon-border bg-card/30 backdrop-blur-xl">
+              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl shadow-lg">
                 <CardContent className="p-6 flex items-start gap-4">
                   <Icon name={item.icon as any} size={24} className="text-secondary flex-shrink-0" />
                   <div>
@@ -287,7 +287,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 rating: 5
               }
             ].map((item, index) => (
-              <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-transform">
+              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-transform shadow-xl">
                 <CardContent className="p-6 space-y-4">
                   <div className="flex gap-1 mb-2">
                     {Array.from({ length: item.rating }).map((_, i) => (
@@ -322,7 +322,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
             <p className="text-xl text-muted-foreground">Выберите свой формат участия</p>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer shimmer group" onClick={() => onOpenForm('module01')}>
+            <Card className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer shimmer group shadow-xl" onClick={() => onOpenForm('module01')}>
               <CardContent className="p-8 space-y-6">
                 <div className="flex justify-between items-start">
                   <Badge className="bg-primary/20 text-primary border-primary/50">ОСНОВНОЙ</Badge>
@@ -339,7 +339,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer group" onClick={() => onOpenForm('module02')}>
+            <Card className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer group shadow-xl" onClick={() => onOpenForm('module02')}>
               <CardContent className="p-8 space-y-6">
                 <div className="flex justify-between items-start">
                   <Badge variant="outline" className="border-secondary text-secondary">СКОРО</Badge>
@@ -368,7 +368,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               Частые <span className="text-accent">вопросы</span>
             </h2>
           </div>
-          <Card className="neon-border bg-card/50 backdrop-blur-xl">
+          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
             <CardContent className="p-8">
               <Accordion type="single" collapsible className="space-y-4">
                 {[
