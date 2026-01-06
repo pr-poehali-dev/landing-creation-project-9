@@ -9,7 +9,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-primary glow-text">пИИонерский</span>
               <br />
-              <span className="text-secondary">ЛАГЕР</span>
+              <span className="text-secondary">ЛАГЕРЬ</span>
             </h3>
             <p className="text-muted-foreground text-sm">AI-интенсив для предпринимателей и творцов</p>
           </div>

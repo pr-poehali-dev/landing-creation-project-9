@@ -152,7 +152,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
           <Card className="neon-border bg-card/95 backdrop-blur-xl mb-8 shadow-xl">
             <CardContent className="p-8 md:p-12 space-y-8">
               <div className="space-y-4">
-                <Badge className="bg-primary/20 text-primary border-primary/50">MODULE_01 :: HUMAN + AI</Badge>
+                <Badge className="bg-primary/20 text-primary border-primary/50">HUMAN + AI</Badge>
                 <p className="text-sm text-muted-foreground">Личная эффективность через AI-стек · 4 дня и 3 ночи · старт: 24 июня</p>
                 <h3 className="text-3xl md:text-4xl font-bold">
                   Соберите свою персональную <span className="text-primary glow-text">AI-инфраструктуру</span>
@@ -214,10 +214,10 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                   <div className="space-y-3">
                     <h4 className="text-sm uppercase tracking-wide text-muted-foreground">Инвестиция в участие</h4>
                     <div className="flex items-baseline gap-4">
-                      <span className="text-5xl font-bold text-primary">50 000 ₽</span>
+                      <span className="text-5xl font-bold text-primary">35 000 ₽</span>
                       <div className="space-y-1">
-                        <span className="text-2xl text-muted-foreground line-through block">65 000 ₽</span>
-                        <Badge variant="outline" className="border-accent text-accent">-23% до 9 февраля</Badge>
+                        <span className="text-2xl text-muted-foreground line-through block">60 000 ₽</span>
+                        <Badge variant="outline" className="border-accent text-accent">-42% до 1 марта</Badge>
                       </div>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -226,13 +226,13 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-accent font-semibold">
                       <Icon name="AlertCircle" size={16} className="animate-pulse" />
-                      <span>Осталось {placesLeft} мест из 25</span>
+                      <span>Осталось {placesLeft} мест из 30</span>
                     </div>
                   </div>
                   <div className="flex flex-col gap-3 w-full lg:w-auto">
                     <Button size="lg" onClick={() => onOpenForm('module01')} className="bg-primary hover:bg-primary/90 pulse-glow w-full lg:w-auto group">
                       <Icon name="Waves" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
-                      Забронировать за 50 000 ₽
+                      Забронировать за 35 000 ₽
                     </Button>
                     <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 w-full lg:w-auto">
                       <Icon name="Send" className="mr-2 group-hover:translate-x-1 transition-transform" size={18} />
@@ -315,48 +315,33 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
       <section className="py-20 px-4 bg-muted/5">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-6 mb-12">
-            <Badge className="bg-primary/20 text-primary border-primary/50">ПРИЗЫВ К ДЕЙСТВИЮ</Badge>
             <h2 className="text-4xl md:text-5xl font-bold">
               Готовы встроить <span className="text-primary glow-text">ИИ</span> в жизнь?
             </h2>
-            <p className="text-xl text-muted-foreground">Выберите свой формат участия</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer shimmer group shadow-xl" onClick={() => onOpenForm('module01')}>
-              <CardContent className="p-8 space-y-6">
-                <div className="flex justify-between items-start">
-                  <Badge className="bg-primary/20 text-primary border-primary/50">ОСНОВНОЙ</Badge>
-                  <Icon name="ArrowRight" size={24} className="text-primary group-hover:translate-x-2 transition-transform" />
+          <Card className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer shimmer group shadow-xl max-w-2xl mx-auto" onClick={() => onOpenForm('module01')}>
+            <CardContent className="p-8 space-y-6">
+              <div className="flex justify-between items-start">
+                <Badge className="bg-primary/20 text-primary border-primary/50">HUMAN + AI</Badge>
+                <Icon name="ArrowRight" size={24} className="text-primary group-hover:translate-x-2 transition-transform" />
+              </div>
+              <h3 className="text-2xl font-bold">4 дня интенсивной работы над вашим личным AI-стеком</h3>
+              <div className="flex items-center gap-2 text-accent">
+                <Icon name="Sun" size={16} className="animate-spin" style={{animationDuration: '6s'}} />
+                <span className="text-sm font-semibold">Старт 24 июня · Осталось {placesLeft} мест из 30</span>
+              </div>
+              <div className="flex items-baseline gap-4 pt-4">
+                <span className="text-4xl font-bold text-primary">35 000 ₽</span>
+                <div className="space-y-1">
+                  <span className="text-xl text-muted-foreground line-through block">60 000 ₽</span>
+                  <Badge variant="outline" className="border-accent text-accent">-42% до 1 марта</Badge>
                 </div>
-                <h3 className="text-2xl font-bold">MODULE_01 :: HUMAN + AI</h3>
-                <p className="text-muted-foreground">4 дня интенсивной работы над вашим личным AI-стеком</p>
-                <div className="flex items-center gap-2 text-accent">
-                  <Icon name="Sun" size={16} className="animate-spin" style={{animationDuration: '6s'}} />
-                  <span className="text-sm font-semibold">Старт 24 июня · Осталось {placesLeft} мест</span>
-                </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 group-hover:pulse-glow">
-                  Записаться сейчас
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer group shadow-xl" onClick={() => onOpenForm('module02')}>
-              <CardContent className="p-8 space-y-6">
-                <div className="flex justify-between items-start">
-                  <Badge variant="outline" className="border-secondary text-secondary">СКОРО</Badge>
-                  <Icon name="Sparkles" size={24} className="text-secondary animate-pulse" />
-                </div>
-                <h3 className="text-2xl font-bold">MODULE_02 :: VIBE MARKETING</h3>
-                <p className="text-muted-foreground">Маркетинг, креатив и коммуникации, усиленные ИИ</p>
-                <div className="flex items-center gap-2 text-secondary">
-                  <Icon name="Calendar" size={16} />
-                  <span className="text-sm font-semibold">Анонс скоро · Лист ожидания открыт</span>
-                </div>
-                <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary/10">
-                  Встать в лист ожидания
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+              <Button className="w-full bg-primary hover:bg-primary/90 group-hover:pulse-glow">
+                Записаться сейчас
+              </Button>
+            </CardContent>
+          </Card>
         </div>
       </section>
 

@@ -14,7 +14,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold">
           <span className="text-primary glow-text">пИИонерский</span>
-          <span className="text-secondary ml-2">ЛАГЕР</span>
+          <span className="text-secondary ml-2">ЛАГЕРЬ</span>
         </div>
         <div className="hidden md:flex gap-8 items-center">
           <a href="#program" className="hover:text-primary transition-colors">Программа</a>

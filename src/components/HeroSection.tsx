@@ -25,7 +25,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button size="lg" onClick={() => onOpenForm('module01')} className="text-lg bg-primary hover:bg-primary/90 pulse-glow group">
               <Icon name="Waves" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
-              Записаться на MODULE_01
+              Записаться
             </Button>
             <Button size="lg" variant="outline" className="text-lg border-secondary text-secondary hover:bg-secondary/10">
               <a href="#program" className="flex items-center">
@@ -47,7 +47,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
               <CardContent className="p-4 flex flex-col items-center gap-2">
                 <Icon name="Users" size={32} className="text-accent animate-pulse" />
                 <p className="font-semibold text-accent">Осталось {placesLeft} мест</p>
-                <p className="text-sm text-muted-foreground">из 25 мест</p>
+                <p className="text-sm text-muted-foreground">из 30 мест</p>
               </CardContent>
             </Card>
             <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">

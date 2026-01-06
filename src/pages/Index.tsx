@@ -9,7 +9,7 @@ import MainSections from '@/components/MainSections';
 import Footer from '@/components/Footer';
 
 const Index = () => {
-  const [placesLeft, setPlacesLeft] = useState(8);
+  const [placesLeft, setPlacesLeft] = useState(19);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +21,7 @@ const Index = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPlacesLeft(prev => Math.max(3, prev - (Math.random() > 0.7 ? 1 : 0)));
+      setPlacesLeft(prev => Math.max(15, prev - (Math.random() > 0.7 ? 1 : 0)));
     }, 30000);
     return () => clearInterval(interval);
   }, []);
@@ -59,7 +59,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="flex justify-between items-center mb-6">
                   <h3 className="text-xl font-bold">
-                    {formType === 'module01' ? 'MODULE_01 :: HUMAN + AI' : 'MODULE_02 :: VIBE MARKETING'}
+                    {formType === 'module01' ? 'HUMAN + AI' : 'VIBE MARKETING'}
                   </h3>
                   <Button variant="ghost" size="icon" onClick={() => setShowForm(false)}>
                     <Icon name="X" size={20} />
