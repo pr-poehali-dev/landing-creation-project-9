@@ -2,16 +2,16 @@ import Icon from '@/components/ui/icon';
 
 const Footer = () => {
   return (
-    <footer className="py-12 px-4 border-t border-primary/20 bg-card/80 backdrop-blur-xl shadow-lg">
+    <footer className="py-8 sm:py-10 md:py-12 px-4 border-t border-primary/20 bg-card/80 backdrop-blur-xl shadow-lg">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
               <span className="text-primary glow-text">пИИонерский</span>
               <br />
               <span className="text-secondary">ЛАГЕРЬ</span>
             </h3>
-            <p className="text-muted-foreground text-sm">AI-интенсив для предпринимателей и творцов</p>
+            <p className="text-muted-foreground text-xs sm:text-sm">AI-интенсив для предпринимателей и творцов</p>
           </div>
           <div>
             <h4 className="font-semibold mb-4 flex items-center gap-2">
@@ -51,8 +51,8 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-primary/20 pt-8 text-center text-sm text-muted-foreground">
-          <p>© 2026 пИИонерский ЛАГЕР. Все права защищены.</p>
+        <div className="border-t border-primary/20 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-muted-foreground">
+          <p>© 2026 пИИонерский ЛАГЕРЬ. Все права защищены.</p>
         </div>
       </div>
     </footer>
