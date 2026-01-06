@@ -210,6 +210,20 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               </div>
 
               <div className="border-t border-primary/20 pt-6 sm:pt-8">
+                <Card className="neon-border bg-gradient-to-br from-secondary/10 to-accent/10 mb-6">
+                  <CardContent className="p-4 sm:p-6">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Icon name="Star" size={24} className="text-secondary flex-shrink-0 animate-pulse" />
+                      <div>
+                        <h4 className="text-lg sm:text-xl font-bold text-secondary mb-2">Всё включено. Буквально всё:</h4>
+                        <p className="text-sm sm:text-base text-foreground leading-relaxed">
+                          Развлечения, баня, шашлыки, проживание и трёхразовое питание каждый день. Честно говоря, мы сами доплачиваем, лишь бы вы приехали)) Это не та ситуация, где нужно думать — просто берите и наслаждайтесь.
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 sm:gap-8">
                   <div className="space-y-3">
                     <h4 className="text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">Инвестиция в участие</h4>
@@ -261,6 +275,104 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-muted/5">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <Badge className="bg-primary/20 text-primary border-primary/50 mb-3 sm:mb-4 text-xs sm:text-sm">СПИКЕР МЕРОПРИЯТИЯ</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-2">
+              Кто будет <span className="text-primary glow-text">вести</span> программу
+            </h2>
+          </div>
+          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
+            <CardContent className="p-6 sm:p-8 md:p-10">
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
+                  <Icon name="User" size={64} className="text-white" />
+                </div>
+                <div className="flex-1 text-center md:text-left space-y-4">
+                  <div>
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-2">Сергей Черников</h3>
+                    <p className="text-primary font-semibold text-sm sm:text-base">Эксперт в области ИИ, нейросетей и маркетинга</p>
+                  </div>
+                  <div className="space-y-3 text-sm sm:text-base text-muted-foreground">
+                    <div className="flex items-start gap-3">
+                      <Icon name="Award" size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                      <p>12+ лет опыта в области искусственного интеллекта и машинного обучения</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="Users" size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                      <p>Помог более 500 предпринимателям из Владивостока внедрить ИИ в свои процессы</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <Icon name="BookOpen" size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                      <p>Автор популярного блога о машинном обучении</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 md:py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <Badge className="bg-accent/20 text-accent border-accent/50 mb-3 sm:mb-4 text-xs sm:text-sm">МЕСТО ПРОВЕДЕНИЯ</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-2">
+              Где будет проходить <span className="text-accent">интенсив</span>
+            </h2>
+          </div>
+          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
+            <CardContent className="p-6 sm:p-8 md:p-10 space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                  <Icon name="MapPin" size={24} className="text-accent" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2">База отдыха «Плёсы Песчаного»</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">Полуостров Песчаный, Владивосток</p>
+                </div>
+              </div>
+              
+              <div className="space-y-4 text-sm sm:text-base text-muted-foreground">
+                <div className="flex items-start gap-3">
+                  <Icon name="Waves" size={20} className="text-primary flex-shrink-0 mt-0.5" />
+                  <p>Прямой выход к морю — идеальное место для вдохновения и отдыха</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Trees" size={20} className="text-accent flex-shrink-0 mt-0.5" />
+                  <p>Природа и свежий воздух создают идеальную атмосферу для обучения</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Icon name="Home" size={20} className="text-secondary flex-shrink-0 mt-0.5" />
+                  <p>Комфортные условия проживания и современная инфраструктура</p>
+                </div>
+              </div>
+
+              <div className="border-t border-primary/20 pt-6">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/30">
+                    <Icon name="MapPin" size={20} className="text-accent flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Адрес</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Полуостров Песчаный, Владивосток, Приморский край</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/30">
+                    <Icon name="Calendar" size={20} className="text-secondary flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Даты</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">24–27 июня 2026</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -326,11 +438,26 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 <Icon name="ArrowRight" size={20} className="text-primary group-hover:translate-x-2 transition-transform flex-shrink-0" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold">4 дня интенсивной работы над вашим личным AI-стеком</h3>
+              
+              <Card className="bg-gradient-to-br from-secondary/10 to-accent/10 border-secondary/30">
+                <CardContent className="p-4 sm:p-5">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Star" size={20} className="text-secondary flex-shrink-0 animate-pulse mt-0.5" />
+                    <div>
+                      <h4 className="font-bold text-secondary mb-1 text-sm sm:text-base">Всё включено. Буквально всё:</h4>
+                      <p className="text-xs sm:text-sm text-foreground">
+                        Развлечения, баня, шашлыки, проживание и трёхразовое питание каждый день. Честно говоря, мы сами доплачиваем, лишь бы вы приехали)) Это не та ситуация, где нужно думать — просто берите и наслаждайтесь.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className="flex items-center gap-2 text-accent flex-wrap">
                 <Icon name="Sun" size={16} className="animate-spin flex-shrink-0" style={{animationDuration: '6s'}} />
                 <span className="text-xs sm:text-sm font-semibold">Старт 24 июня · Осталось {placesLeft} мест из 30</span>
               </div>
-              <div className="flex flex-wrap items-baseline gap-3 sm:gap-4 pt-2 sm:pt-4">
+              <div className="flex flex-wrap items-baseline gap-3 sm:gap-4">
                 <span className="text-3xl sm:text-4xl font-bold text-primary">35 000 ₽</span>
                 <div className="space-y-1">
                   <span className="text-lg sm:text-xl text-muted-foreground line-through block">60 000 ₽</span>
