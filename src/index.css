@@ -203,4 +203,24 @@
       left: 100%;
     }
   }
+
+  .wave-animation {
+    animation: wave-move 20s ease-in-out infinite;
+  }
+
+  @keyframes wave-move {
+    0%,
+    100% {
+      transform: translateX(0) translateY(0) scale(1);
+    }
+    25% {
+      transform: translateX(-2%) translateY(1%) scale(1.02);
+    }
+    50% {
+      transform: translateX(0) translateY(-1%) scale(1);
+    }
+    75% {
+      transform: translateX(2%) translateY(1%) scale(1.02);
+    }
+  }
 }
