@@ -30,12 +30,12 @@ const Footer = () => {
               Контакты
             </h4>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <a href="https://t.me/ТОЧКИ_НАД_ИИ" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors flex items-center gap-2">
-                <Icon name="Send" size={14} />
+              <a href="https://t.me/ТОЧКИ_НАД_ИИ" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors flex items-center gap-2 group">
+                <Icon name="Send" size={14} className="group-hover:translate-x-1 transition-transform" />
                 Telegram: ТОЧКИ НАД ИИ
               </a>
-              <a href="mailto:support@точкинадии.ru" className="block hover:text-primary transition-colors flex items-center gap-2">
-                <Icon name="Mail" size={14} />
+              <a href="mailto:support@точкинадии.ru" className="block hover:text-primary transition-colors flex items-center gap-2 group">
+                <Icon name="Mail" size={14} className="group-hover:scale-110 transition-transform" />
                 support@точкинадии.ru
               </a>
             </div>

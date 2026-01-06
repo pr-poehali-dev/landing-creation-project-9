@@ -29,7 +29,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
             </Button>
             <Button size="lg" variant="outline" className="text-lg border-secondary text-secondary hover:bg-secondary/10">
               <a href="#program" className="flex items-center">
-                <Icon name="ChevronDown" className="mr-2" size={20} />
+                <Icon name="ChevronDown" className="mr-2 animate-bounce" size={20} />
                 Смотреть программу
               </a>
             </Button>
@@ -38,21 +38,21 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12">
             <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Sun" size={32} className="text-secondary" />
+                <Icon name="Sun" size={32} className="text-secondary animate-spin" style={{animationDuration: '8s'}} />
                 <p className="font-semibold">24–27 июня 2026</p>
                 <p className="text-sm text-muted-foreground">4 дня и 3 ночи</p>
               </CardContent>
             </Card>
             <Card className="neon-border bg-card/95 backdrop-blur-xl pulse-glow shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Users" size={32} className="text-accent" />
+                <Icon name="Users" size={32} className="text-accent animate-pulse" />
                 <p className="font-semibold text-accent">Осталось {placesLeft} мест</p>
                 <p className="text-sm text-muted-foreground">из 25 мест</p>
               </CardContent>
             </Card>
             <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Palmtree" size={32} className="text-accent" />
+                <Icon name="Palmtree" size={32} className="text-accent" style={{animation: 'float 3s ease-in-out infinite'}} />
                 <p className="font-semibold">Практический формат</p>
                 <p className="text-sm text-muted-foreground">Без воды и теории</p>
               </CardContent>

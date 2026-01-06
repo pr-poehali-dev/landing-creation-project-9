@@ -24,10 +24,10 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
             <Card className="neon-border bg-card/95 backdrop-blur-xl animate-scale-in shadow-xl">
               <CardContent className="p-8 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Icon name="AlertTriangle" size={24} className="text-accent" />
+                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center animate-pulse">
+                    <Icon name="AlertTriangle" size={24} className="text-red-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-accent">Знакомо?</h3>
+                  <h3 className="text-2xl font-bold text-red-600">Знакомо?</h3>
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -37,7 +37,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                     'Чувствуете, что волна ИИ здесь, но не знаете с чего начать'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3 group">
-                      <Icon name="X" size={20} className="text-accent flex-shrink-0 mt-1 group-hover:rotate-90 transition-transform" />
+                      <Icon name="X" size={20} className="text-red-600 flex-shrink-0 mt-1 group-hover:rotate-90 transition-transform" />
                       <span className="text-muted-foreground group-hover:text-foreground transition-colors">{item}</span>
                     </li>
                   ))}
@@ -49,7 +49,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               <CardContent className="p-8 space-y-6">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Icon name="Sun" size={24} className="text-secondary" />
+                    <Icon name="Sun" size={24} className="text-secondary animate-spin" style={{animationDuration: '6s'}} />
                   </div>
                   <h3 className="text-2xl font-bold text-secondary">Решение</h3>
                 </div>
@@ -64,7 +64,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                     'Личный AI-стек под вашу жизнь'
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3 group">
-                      <Icon name="CheckCircle2" size={20} className="text-secondary flex-shrink-0 mt-1 group-hover:scale-110 transition-transform" />
+                      <Icon name="CheckCircle2" size={20} className="text-secondary flex-shrink-0 mt-1 group-hover:scale-110 group-hover:rotate-12 transition-all" />
                       <span className="group-hover:text-secondary transition-colors">{item}</span>
                     </li>
                   ))}
@@ -165,17 +165,17 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
 
               <div className="grid sm:grid-cols-3 gap-4 p-6 rounded-xl bg-muted/30">
                 <div className="text-center">
-                  <Icon name="Sparkles" size={32} className="text-primary mx-auto mb-2" />
+                  <Icon name="Sparkles" size={32} className="text-primary mx-auto mb-2 animate-pulse" />
                   <p className="text-2xl font-bold">7</p>
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
                 </div>
                 <div className="text-center">
-                  <Icon name="Sun" size={32} className="text-secondary mx-auto mb-2" />
+                  <Icon name="Sun" size={32} className="text-secondary mx-auto mb-2 animate-spin" style={{animationDuration: '8s'}} />
                   <p className="text-2xl font-bold">100%</p>
                   <p className="text-sm text-muted-foreground">Практика</p>
                 </div>
                 <div className="text-center">
-                  <Icon name="Palmtree" size={32} className="text-accent mx-auto mb-2" />
+                  <Icon name="Palmtree" size={32} className="text-accent mx-auto mb-2" style={{animation: 'float 3s ease-in-out infinite'}} />
                   <p className="text-2xl font-bold">4</p>
                   <p className="text-sm text-muted-foreground">Дня интенсива</p>
                 </div>
@@ -183,7 +183,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
 
               <div className="space-y-4">
                 <h4 className="text-2xl font-bold flex items-center gap-2">
-                  <Icon name="Waves" size={24} className="text-primary" />
+                  <Icon name="Waves" size={24} className="text-primary" style={{animation: 'float 2s ease-in-out infinite'}} />
                   Что вы создадите
                 </h4>
                 <div className="grid gap-3">
@@ -221,11 +221,11 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                       </div>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Icon name="Clock" size={16} className="text-accent" />
+                      <Icon name="Clock" size={16} className="text-accent animate-pulse" />
                       <span>Цена вырастет после дедлайна</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-accent font-semibold">
-                      <Icon name="AlertCircle" size={16} />
+                      <Icon name="AlertCircle" size={16} className="animate-pulse" />
                       <span>Осталось {placesLeft} мест из 25</span>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                       Забронировать за 50 000 ₽
                     </Button>
                     <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 w-full lg:w-auto">
-                      <Icon name="Send" className="mr-2" size={18} />
+                      <Icon name="Send" className="mr-2 group-hover:translate-x-1 transition-transform" size={18} />
                       <a href="https://t.me/ТОЧКИ_НАД_ИИ" target="_blank" rel="noopener noreferrer">Задать вопрос</a>
                     </Button>
                   </div>
@@ -250,9 +250,9 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               { icon: 'Users', title: 'Нетворкинг', description: 'Знакомства с единомышленниками' },
               { icon: 'Headphones', title: 'Поддержка 24/7', description: 'Чат поддержки и после кэмпа' }
             ].map((item, index) => (
-              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl shadow-lg">
+              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl shadow-lg group hover:scale-105 transition-transform cursor-pointer">
                 <CardContent className="p-6 flex items-start gap-4">
-                  <Icon name={item.icon as any} size={24} className="text-secondary flex-shrink-0" />
+                  <Icon name={item.icon as any} size={24} className="text-secondary flex-shrink-0 group-hover:scale-110 transition-transform" />
                   <div>
                     <h5 className="font-semibold mb-1">{item.title}</h5>
                     <p className="text-sm text-muted-foreground">{item.description}</p>
@@ -291,10 +291,10 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 <CardContent className="p-6 space-y-4">
                   <div className="flex gap-1 mb-2">
                     {Array.from({ length: item.rating }).map((_, i) => (
-                      <Icon key={i} name="Star" size={18} className="text-secondary fill-secondary" />
+                      <Icon key={i} name="Star" size={18} className="text-secondary fill-secondary animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />
                     ))}
                   </div>
-                  <Icon name="Quote" size={32} className="text-primary/30" />
+                  <Icon name="Quote" size={32} className="text-primary/30 animate-pulse" />
                   <p className="text-lg italic leading-relaxed">"{item.quote}"</p>
                   <div className="flex items-center gap-3 pt-4 border-t border-primary/10">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
@@ -331,7 +331,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                 <h3 className="text-2xl font-bold">MODULE_01 :: HUMAN + AI</h3>
                 <p className="text-muted-foreground">4 дня интенсивной работы над вашим личным AI-стеком</p>
                 <div className="flex items-center gap-2 text-accent">
-                  <Icon name="Sun" size={16} />
+                  <Icon name="Sun" size={16} className="animate-spin" style={{animationDuration: '6s'}} />
                   <span className="text-sm font-semibold">Старт 24 июня · Осталось {placesLeft} мест</span>
                 </div>
                 <Button className="w-full bg-primary hover:bg-primary/90 group-hover:pulse-glow">
@@ -343,7 +343,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
               <CardContent className="p-8 space-y-6">
                 <div className="flex justify-between items-start">
                   <Badge variant="outline" className="border-secondary text-secondary">СКОРО</Badge>
-                  <Icon name="Sparkles" size={24} className="text-secondary group-hover:animate-pulse" />
+                  <Icon name="Sparkles" size={24} className="text-secondary animate-pulse" />
                 </div>
                 <h3 className="text-2xl font-bold">MODULE_02 :: VIBE MARKETING</h3>
                 <p className="text-muted-foreground">Маркетинг, креатив и коммуникации, усиленные ИИ</p>
@@ -396,7 +396,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                   <AccordionItem key={index} value={`item-${index}`} className="border-primary/20">
                     <AccordionTrigger className="text-left hover:text-primary transition-colors">
                       <span className="flex items-center gap-2">
-                        <Icon name="HelpCircle" size={18} className="text-primary" />
+                        <Icon name="HelpCircle" size={18} className="text-primary group-hover:rotate-12 transition-transform" />
                         {item.question}
                       </span>
                     </AccordionTrigger>
