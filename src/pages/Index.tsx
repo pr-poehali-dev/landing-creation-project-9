@@ -26,12 +26,33 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Спасибо! Мы свяжемся с вами в Telegram в ближайшее время.');
-    setShowForm(false);
-    setFormData({ name: '', email: '', telegram: '', role: '' });
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/ac1f715b-f732-4bcd-9475-5c7805a3d158', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert('Спасибо! Мы свяжемся с вами в Telegram в ближайшее время.');
+        setShowForm(false);
+        setFormData({ name: '', email: '', telegram: '', role: '' });
+      } else {
+        alert(result.error || 'Произошла ошибка. Попробуйте еще раз.');
+      }
+    } catch (error) {
+      alert('Ошибка отправки. Проверьте интернет и попробуйте снова.');
+    }
   };
 
   const openForm = (type: 'module01' | 'module02') => {
