@@ -169,7 +169,8 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                 </div>
                 <div className="flex-1 text-center md:text-left space-y-4">
                   <div>
-                    <h3 className="text-2xl sm:text-3xl font-bold mb-2">Сергей Черников</h3>
+                    <h3 className="text-2xl sm:text-3xl font-bold mb-1">Сергей Черников</h3>
+                    <p className="text-red-600 font-bold text-sm sm:text-base mb-2">главный вожатый</p>
                     <p className="text-primary font-semibold text-sm sm:text-base">Эксперт в области ИИ, нейросетей и маркетинга</p>
                   </div>
                   <div className="space-y-3 text-sm sm:text-base text-muted-foreground">
