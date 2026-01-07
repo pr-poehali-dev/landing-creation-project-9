@@ -12,9 +12,12 @@ const Header = ({ onOpenForm }: HeaderProps) => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-card/90 border-b border-primary/20 shadow-lg">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">
-          <span className="text-primary glow-text">пИИонерский</span>
-          <span className="text-secondary ml-2">ЛАГЕРЬ</span>
+        <div className="flex items-center">
+          <img 
+            src="https://cdn.poehali.dev/files/freepik__-ai-__60966.png" 
+            alt="пИИонерский ЛАГЕРЬ" 
+            className="h-12 sm:h-14 w-auto"
+          />
         </div>
         <div className="hidden md:flex gap-4 lg:gap-6 items-center">
           <a href="#program" className="hover:text-primary transition-colors text-sm lg:text-base">Программа</a>
