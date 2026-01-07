@@ -24,8 +24,8 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           <Badge variant="outline" className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 border-primary/50 text-primary shimmer">
             ПИИОНЕРСКИЙ ЛАГЕРЬ 18+ · ЛЕТО 2026
           </Badge>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2">
-            Как люди, которые умеют работать с <span className="text-primary glow-text">ИИ</span>, зарабатывают в <span className="text-secondary">3–4 раза больше</span> и работают в <span className="text-accent">2 раза меньше</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight px-2 hero-title">
+            Как <span className="hero-accent">капитаны ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-2">
             4 дня в пИИонерском лагере, где вы соберёте свой AI-стек: второй мозг, ассистенты, сайты, презентации и личную систему продуктивности.
