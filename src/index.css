@@ -256,21 +256,7 @@
     font-family: "Orbitron", sans-serif;
     font-weight: 800;
     letter-spacing: -0.02em;
-    background: linear-gradient(
-      135deg,
-      hsl(var(--primary)) 0%,
-      hsl(var(--accent)) 30%,
-      hsl(var(--secondary)) 60%,
-      hsl(var(--primary)) 100%
-    );
-    background-size: 200% 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: wave-gradient 8s ease infinite;
-    text-shadow:
-      0 0 40px rgba(56, 189, 248, 0.3),
-      0 0 80px rgba(56, 189, 248, 0.2);
+    color: hsl(var(--foreground));
   }
 
   @keyframes wave-gradient {
@@ -287,6 +273,17 @@
     font-weight: 900;
     position: relative;
     display: inline-block;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--primary)) 0%,
+      hsl(var(--accent)) 50%,
+      hsl(var(--secondary)) 100%
+    );
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wave-gradient 8s ease infinite;
   }
 
   .hero-accent::after {
