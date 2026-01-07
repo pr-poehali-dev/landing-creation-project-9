@@ -54,7 +54,18 @@ const BenefitsSection = () => {
                     <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
                   </div>
                   <Badge variant="outline" className={`text-${item.color} border-${item.color}/50 text-xs`}>
-                    {item.stat}
+                    <span className={
+                      index === 0 ? 'inline-block animate-bounce' :
+                      index === 1 ? 'inline-block' : 
+                      index === 2 ? 'inline-block' :
+                      'inline-block animate-pulse'
+                    } style={
+                      index === 1 ? {animation: 'bounce 1s infinite', animationDirection: 'reverse'} :
+                      index === 2 ? {animation: 'spin 3s linear infinite'} :
+                      undefined
+                    }>
+                      {item.stat}
+                    </span>
                   </Badge>
                 </div>
                 <div>
