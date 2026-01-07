@@ -160,8 +160,12 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
           <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
             <CardContent className="p-6 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center flex-shrink-0">
-                  <Icon name="User" size={64} className="text-white" />
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
+                  <img 
+                    src="https://cdn.poehali.dev/files/freepik__-__92401.png" 
+                    alt="Сергей Черников" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="flex-1 text-center md:text-left space-y-4">
                   <div>
