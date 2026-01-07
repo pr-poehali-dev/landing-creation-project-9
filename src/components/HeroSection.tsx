@@ -59,7 +59,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
             </Card>
             <Card className="neon-border bg-card/50 backdrop-blur-xl pulse-glow shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Users" size={32} className="text-accent animate-pulse" />
+                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60971.png" alt="Осталось мест" className="w-8 h-8 animate-pulse" />
                 <p className="font-semibold text-accent">Осталось {placesLeft} мест</p>
                 <p className="text-sm text-muted-foreground">из 30 мест</p>
               </CardContent>
