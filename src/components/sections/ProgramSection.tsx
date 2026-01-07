@@ -120,9 +120,11 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                       <Icon name="Waves" className="mr-2 group-hover:rotate-12 transition-transform" size={18} />
                       Забронировать за 35 000 ₽
                     </Button>
-                    <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 w-full lg:w-auto text-sm sm:text-base">
-                      <Icon name="Send" className="mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                      <a href="https://t.me/ТОЧКИ_НАД_ИИ" target="_blank" rel="noopener noreferrer">Задать вопрос</a>
+                    <Button size="lg" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 w-full lg:w-auto text-sm sm:text-base" asChild>
+                      <a href="https://t.me/DashaChernikova8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                        <Icon name="Send" className="mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                        Задать вопрос
+                      </a>
                     </Button>
                   </div>
                 </div>
