@@ -12,7 +12,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
   return (
     <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 relative">
       <div className="container mx-auto relative">
-        <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 -z-0 opacity-30 md:opacity-50 animate-float">
+        <div className="absolute -top-16 sm:-top-20 md:-top-24 right-4 sm:right-8 md:right-12 lg:right-16 w-24 sm:w-32 md:w-40 lg:w-48 -z-0 opacity-40 md:opacity-60 animate-float">
           <img 
             src="https://cdn.poehali.dev/files/freepik__-ai-__60961.png" 
             alt="AI Pioneer Logo" 
