@@ -35,17 +35,15 @@ const ProblemSolutionSection = () => {
             </CardContent>
           </Card>
 
-          <Card className="neon-border bg-card/95 backdrop-blur-xl animate-scale-in shimmer shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl animate-scale-in shimmer shadow-xl">
             <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
-                  <Icon name="Sun" size={24} className="text-secondary animate-spin" style={{animationDuration: '6s'}} />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-secondary">Решение</h3>
+                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60975.png" alt="Решение" className="w-12 h-12" />
+                <h3 className="text-xl sm:text-2xl font-bold text-green-600">Решение</h3>
               </div>
               <p className="text-lg">
                 <span className="font-semibold text-primary">пИИонерский лагер</span> — это не курс по генерации картинок. 
-                Это практический кэмп по <span className="text-secondary font-semibold">AI-ориентированному мышлению</span>.
+                Это практический кэмп по <span className="text-green-600 font-semibold">AI-ориентированному мышлению</span>.
               </p>
               <ul className="space-y-3">
                 {[
@@ -54,8 +52,8 @@ const ProblemSolutionSection = () => {
                   'Личный AI-стек под вашу жизнь'
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 group">
-                    <Icon name="CheckCircle2" size={20} className="text-secondary flex-shrink-0 mt-1 group-hover:scale-110 group-hover:rotate-12 transition-all" />
-                    <span className="group-hover:text-secondary transition-colors">{item}</span>
+                    <Icon name="CheckCircle2" size={20} className="text-green-600 flex-shrink-0 mt-1 group-hover:scale-110 group-hover:rotate-12 transition-all" />
+                    <span className="group-hover:text-green-600 transition-colors">{item}</span>
                   </li>
                 ))}
               </ul>
