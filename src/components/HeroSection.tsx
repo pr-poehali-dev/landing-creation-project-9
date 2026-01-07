@@ -26,7 +26,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
             </Badge>
           </div>
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight px-2 hero-title">
-            Как <span className="hero-accent">капитаны ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
+            Как <span className="hero-accent">пионеры ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
           </h1>
           <div className="max-w-4xl mx-auto px-2 py-2">
             <img 
