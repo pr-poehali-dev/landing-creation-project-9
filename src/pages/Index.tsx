@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import BookingFormModal from '@/components/modals/BookingFormModal';
 import OfertaModal from '@/components/modals/OfertaModal';
 import PrivacyModal from '@/components/modals/PrivacyModal';
+import SuccessModal from '@/components/modals/SuccessModal';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
   const [showForm, setShowForm] = useState(false);
   const [showOferta, setShowOferta] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   const [formType, setFormType] = useState<'module01' | 'module02'>('module01');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -55,10 +57,10 @@ const Index = () => {
       const result = await response.json();
 
       if (response.ok) {
-        alert('🎉 Ура! Заявка получена!\n\nПривет, капитан! Ты на борту.\n\nМы получили твою заявку на пИИонерский ЛАГЕРЬ и скоро свяжемся с тобой, чтобы обсудить детали.\n\nОбычно отвечаем в течение нескольких часов (если не спим 😴).\n\nА пока — подписывайся на наш канал, чтобы быть в курсе всех новостей и получать полезные материалы по ИИ ещё до старта:\n\n👉 https://t.me/chernikovgpt\n\nДо встречи на Песчаном! 🌊');
         setShowForm(false);
         setFormData({ name: '', phone: '', role: '' });
         setAgreedToTerms(false);
+        setShowSuccess(true);
       } else {
         alert(result.error || 'Произошла ошибка. Попробуйте еще раз.');
       }
@@ -112,6 +114,11 @@ const Index = () => {
         <PrivacyModal
           showPrivacy={showPrivacy}
           onClose={() => setShowPrivacy(false)}
+        />
+
+        <SuccessModal
+          show={showSuccess}
+          onClose={() => setShowSuccess(false)}
         />
 
         <HeroSection placesLeft={placesLeft} onOpenForm={openForm} />
