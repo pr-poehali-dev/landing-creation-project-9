@@ -22,11 +22,11 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
         </div>
         <div className="max-w-5xl mx-auto text-center space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in relative z-10">
           <div className="relative inline-block">
-            <div className="absolute inset-0 flex items-center justify-center opacity-15 scale-[1.8]">
+            <div className="absolute inset-0 flex items-center justify-center opacity-20 scale-[1.8]">
               <img 
-                src="https://cdn.poehali.dev/projects/0c6e3721-7d9f-4d23-a289-2455cad00bee/files/fdc6fa09-c2e3-4114-a834-abfd4b5e7049.jpg" 
-                alt="Ship wheel" 
-                className="w-24 h-24 animate-spin-slow mix-blend-multiply"
+                src="https://cdn.poehali.dev/files/freepik__-ai-__60962.png" 
+                alt="AI Ship wheel" 
+                className="w-24 h-24 animate-spin-slow"
               />
             </div>
             <Badge variant="outline" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 py-2 sm:py-3 border-primary/70 bg-card/80 backdrop-blur-sm relative z-10 font-bold tracking-wide badge-ocean">
