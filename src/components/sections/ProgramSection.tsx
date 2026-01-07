@@ -266,43 +266,42 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                 Вы можете добраться до базы отдыха удобным для вас способом:
               </p>
 
-              <div className="flex flex-col lg:flex-row gap-6">
-                <div className="lg:w-1/2 rounded-lg overflow-hidden border-4 border-primary/20 flex-shrink-0">
+              <div className="flex flex-col lg:flex-row gap-4">
+                <div className="w-full lg:w-80 rounded-lg overflow-hidden border-4 border-primary/20 flex-shrink-0 mx-auto lg:mx-0">
                   <img 
                     src="https://cdn.poehali.dev/files/Screenshot (5).png" 
                     alt="Карта проезда" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
 
-                <div className="lg:w-1/2 space-y-4">
-                  <div className="flex items-start gap-3 p-4 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20">
-                    <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Icon name="Waves" size={16} className="text-primary" />
+                <div className="flex-1 space-y-3">
+                  <div className="flex items-start gap-2 p-3 rounded-lg bg-gradient-to-br from-primary/5 to-accent/5 border border-primary/20">
+                    <div className="w-7 h-7 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon name="Waves" size={14} className="text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-base sm:text-lg font-bold text-primary mb-2">1. МОРСКОЙ МАРШРУТ</h4>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        Рядом с ж/д вокзалом города Владивосток находится Вокзал Прибрежных сообщений (паромная переправа), оттуда по расписанию отходит Катер на Мыс Песчаный. Катер идет два раза в день (кроме вторника и четверга). Во время морской прогулки можно увидеть наши удивительные и красивые Мосты, Маяк и панораму Владивостока.
+                      <h4 className="text-sm sm:text-base font-bold text-primary mb-1">1. МОРСКОЙ МАРШРУТ</h4>
+                      <p className="text-xs text-muted-foreground leading-snug">
+                        Рядом с ж/д вокзалом города Владивосток находится Вокзал Прибрежных сообщений (паромная переправа), оттуда по расписанию отходит Катер на Мыс Песчаный. Катер идет два раза в день (кроме вторника и четверга).
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 p-4 rounded-lg bg-gradient-to-br from-accent/5 to-secondary/5 border border-accent/20">
-                    <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-1">
-                      <Icon name="Car" size={16} className="text-accent" />
+                  <div className="flex items-start gap-2 p-3 rounded-lg bg-gradient-to-br from-accent/5 to-secondary/5 border border-accent/20">
+                    <div className="w-7 h-7 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon name="Car" size={14} className="text-accent" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-base sm:text-lg font-bold text-accent mb-2">2. НАЗЕМНЫЙ МАРШРУТ</h4>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                        По трассе М60 Владивосток-Хабаровск до поворота на Раздольное, затем по главной дороге поселка до поворота налево на мост (на указателе отмечено: "Хасан - налево"). Затем 57 км по основной дороге до села Занадворовка, проехать его (трасса идет сквозь поселок) и еще 1 км до поворота на село Береговое, поворот налево на грунтовую дорогу (22 км) (большой синий указатель). Далее по хорошей грунтовке 14 км до села Береговое. Проехать его. И остается еще 6 км до пирса. И Вы на месте – въезд на базу в большие деревянные ворота.
+                      <h4 className="text-sm sm:text-base font-bold text-accent mb-1">2. НАЗЕМНЫЙ МАРШРУТ</h4>
+                      <p className="text-xs text-muted-foreground leading-snug">
+                        По трассе М60 Владивосток-Хабаровск до поворота на Раздольное, затем по главной дороге поселка до поворота налево на мост (на указателе отмечено: "Хасан - налево"). Затем 57 км по основной дороге до села Занадворовка, проехать его (трасса идет сквозь поселок) и еще 1 км до поворота на село Береговое, поворот налево на грунтовую дорогу (22 км) (большой синий указатель). Далее по хорошей грунтовке 14 км до села Береговое. Проехать его. И остается еще 6 км до пирса.
                       </p>
                     </div>
                   </div>
 
-                  <div className="text-center pt-4 border-t border-primary/20 space-y-1">
-                    <p className="text-base sm:text-lg font-bold text-secondary">До скорой встречи!</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">А каким именно способом к нам приехать - решать вам!</p>
+                  <div className="text-center pt-2 border-t border-primary/20">
+                    <p className="text-sm sm:text-base font-bold text-secondary">До скорой встречи!</p>
                   </div>
                 </div>
               </div>
