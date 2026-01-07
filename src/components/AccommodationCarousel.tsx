@@ -17,6 +17,11 @@ const AccommodationCarousel = () => {
       description: 'Просторный зал для обучения и проведения мастер-классов'
     },
     {
+      url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-34-51.jpg',
+      title: 'Территория и природа',
+      description: 'Живописная территория среди зелени с дорожками для прогулок'
+    },
+    {
       url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-34-47.jpg',
       title: 'Корпус "Южный"',
       description: 'Комфортабельные номера с современным ремонтом'
@@ -28,8 +33,28 @@ const AccommodationCarousel = () => {
     },
     {
       url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-33-44.jpg',
-      title: 'Номер',
-      description: 'Комфортное размещение с удобствами'
+      title: 'Номер с удобствами',
+      description: 'Комфортное размещение на 3-4 человека'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-33-40.jpg',
+      title: 'Двухместный номер',
+      description: 'Уютная комната с удобными кроватями'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-33-37.jpg',
+      title: 'Холл корпуса',
+      description: 'Просторное общее пространство с зоной отдыха'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-33-34.jpg',
+      title: 'Холл второго этажа',
+      description: 'Комфортная зона для общения и отдыха'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-33-22.jpg',
+      title: 'Главный корпус',
+      description: 'Уютное здание с номерами и всеми удобствами'
     }
   ];
 
