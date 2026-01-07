@@ -16,9 +16,7 @@ const ProblemSolutionSection = () => {
           <Card className="neon-border bg-card/50 backdrop-blur-xl animate-scale-in shadow-xl">
             <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center animate-pulse">
-                  <Icon name="AlertTriangle" size={24} className="text-red-600" />
-                </div>
+                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60974.png" alt="Внимание" className="w-12 h-12 animate-pulse" />
                 <h3 className="text-xl sm:text-2xl font-bold text-red-600">Знакомо?</h3>
               </div>
               <ul className="space-y-4">
