@@ -38,7 +38,7 @@ const ProblemSolutionSection = () => {
           <Card className="neon-border bg-card/50 backdrop-blur-xl animate-scale-in shimmer shadow-xl">
             <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-3 mb-6">
-                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60975.png" alt="Решение" className="w-12 h-12" />
+                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60975.png" alt="Решение" className="w-12 h-12" style={{animation: 'float 3s ease-in-out infinite'}} />
                 <h3 className="text-xl sm:text-2xl font-bold text-green-600">Решение</h3>
               </div>
               <p className="text-lg">
