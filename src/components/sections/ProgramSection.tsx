@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import AccommodationCarousel from '@/components/AccommodationCarousel';
 
 interface ProgramSectionProps {
   placesLeft: number;
@@ -305,6 +306,22 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   </div>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-12 sm:py-16 md:py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <Badge className="bg-primary/20 text-primary border-primary/50 mb-3 sm:mb-4 text-xs sm:text-sm">ПРОЖИВАНИЕ</Badge>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-2">
+              Как мы будем <span className="text-primary">жить</span>
+            </h2>
+          </div>
+          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl overflow-hidden">
+            <CardContent className="p-0">
+              <AccommodationCarousel />
             </CardContent>
           </Card>
         </div>
