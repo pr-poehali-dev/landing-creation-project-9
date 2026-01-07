@@ -13,7 +13,7 @@ const ProblemSolutionSection = () => {
           </h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-          <Card className="neon-border bg-card/95 backdrop-blur-xl animate-scale-in shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl animate-scale-in shadow-xl">
             <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center animate-pulse">

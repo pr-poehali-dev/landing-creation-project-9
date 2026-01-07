@@ -114,7 +114,7 @@ const AccommodationCarousel = () => {
           variant="ghost"
           size="icon"
           onClick={prevSlide}
-          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-background/50 hover:bg-background/70 backdrop-blur-sm"
         >
           <Icon name="ChevronLeft" size={24} />
         </Button>
@@ -123,13 +123,13 @@ const AccommodationCarousel = () => {
           variant="ghost"
           size="icon"
           onClick={nextSlide}
-          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-background/80 hover:bg-background/90 backdrop-blur-sm"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-background/50 hover:bg-background/70 backdrop-blur-sm"
         >
           <Icon name="ChevronRight" size={24} />
         </Button>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-2 p-4 bg-muted/30">
+      <div className="flex flex-wrap justify-center gap-2 p-4 bg-muted/20">
         {images.map((_, index) => (
           <button
             key={index}
@@ -155,7 +155,7 @@ const AccommodationCarousel = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6">
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10">
               <Icon name="Users" size={24} className="text-primary flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Большая общая зона</p>
@@ -163,7 +163,7 @@ const AccommodationCarousel = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10">
               <Icon name="Baby" size={24} className="text-secondary flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Детская игровая</p>
@@ -171,7 +171,7 @@ const AccommodationCarousel = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10">
               <Icon name="Coffee" size={24} className="text-accent flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Мини-кухня</p>
@@ -179,7 +179,7 @@ const AccommodationCarousel = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10">
               <Icon name="Flame" size={24} className="text-primary flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Мангальные зоны</p>
@@ -187,7 +187,7 @@ const AccommodationCarousel = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10">
               <Icon name="Trophy" size={24} className="text-secondary flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Теннисные столы</p>
@@ -195,7 +195,7 @@ const AccommodationCarousel = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-primary/10">
               <Icon name="Volleyball" size={24} className="text-accent flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Волейбольная площадка</p>
@@ -243,7 +243,7 @@ const AccommodationCarousel = () => {
           </div>
 
           <div className="border-t border-primary/20 pt-6">
-            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-accent/30">
+            <div className="flex items-start gap-3 p-4 rounded-lg bg-card/50 backdrop-blur-sm border border-accent/30">
               <Icon name="Home" size={24} className="text-accent flex-shrink-0 mt-0.5" />
               <div>
                 <p className="text-sm font-semibold mb-1">Номера - спальни с санузлом</p>

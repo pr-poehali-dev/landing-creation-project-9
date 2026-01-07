@@ -19,7 +19,7 @@ const TestimonialsCTAFAQ = ({ placesLeft, onOpenForm }: TestimonialsCTAFAQProps)
               Готовы встроить <span className="text-primary glow-text">ИИ</span> в жизнь?
             </h2>
           </div>
-          <Card className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer shimmer group shadow-xl max-w-2xl mx-auto" onClick={() => onOpenForm('module01')}>
+          <Card className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all cursor-pointer shimmer group shadow-xl max-w-2xl mx-auto" onClick={() => onOpenForm('module01')}>
             <CardContent className="p-6 sm:p-8 space-y-4 sm:space-y-6">
               <div className="flex justify-between items-start gap-2">
                 <Badge className="bg-primary/20 text-primary border-primary/50 text-xs sm:text-sm">HUMAN + AI</Badge>
@@ -68,7 +68,7 @@ const TestimonialsCTAFAQ = ({ placesLeft, onOpenForm }: TestimonialsCTAFAQProps)
               Частые <span className="text-accent">вопросы</span>
             </h2>
           </div>
-          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl">
             <CardContent className="p-5 sm:p-6 md:p-8">
               <Accordion type="single" collapsible className="space-y-4">
                 {[

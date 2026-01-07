@@ -21,7 +21,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
             </h2>
           </div>
           
-          <Card className="neon-border bg-card/95 backdrop-blur-xl mb-6 sm:mb-8 shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl mb-6 sm:mb-8 shadow-xl">
             <CardContent className="p-6 sm:p-8 md:p-10 lg:p-12 space-y-6 sm:space-y-8">
               <div className="space-y-3 sm:space-y-4">
                 <Badge className="bg-primary/20 text-primary border-primary/50 text-xs sm:text-sm">HUMAN + AI</Badge>
@@ -35,7 +35,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 rounded-xl bg-muted/30">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 rounded-xl bg-muted/20">
                 <div className="text-center">
                   <Icon name="Sparkles" size={32} className="text-primary mx-auto mb-2 animate-pulse" />
                   <p className="text-2xl font-bold">7</p>
@@ -68,7 +68,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                     { icon: 'Sparkles', title: 'Нейро-фотосессии топ-уровня', description: 'Визуалы дороже стоковых решений для вашего бренда' },
                     { icon: 'Presentation', title: 'Презентации от 50 000 ₽', description: 'Продающие PPT для клиентов и своих запусков' }
                   ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-all group cursor-pointer border border-transparent hover:border-primary/30">
+                    <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-muted/20 hover:bg-muted/40 transition-all group cursor-pointer border border-transparent hover:border-primary/30">
                       <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                         <Icon name={item.icon as any} size={18} className="text-primary" />
                       </div>
@@ -82,7 +82,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               </div>
 
               <div className="border-t border-primary/20 pt-6 sm:pt-8">
-                <Card className="neon-border bg-gradient-to-br from-secondary/10 to-accent/10 mb-6">
+                <Card className="neon-border bg-gradient-to-br from-secondary/5 to-accent/5 mb-6">
                   <CardContent className="p-4 sm:p-6">
                     <div className="flex items-start gap-3 mb-3">
                       <Icon name="Star" size={24} className="text-secondary flex-shrink-0 animate-pulse" />
@@ -138,7 +138,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               { icon: 'Users', title: 'Нетворкинг', description: 'Знакомства с единомышленниками' },
               { icon: 'Headphones', title: 'Поддержка', description: 'Чат поддержки и после кэмпа' }
             ].map((item, index) => (
-              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl shadow-lg group hover:scale-105 transition-transform cursor-pointer">
+              <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl shadow-lg group hover:scale-105 transition-transform cursor-pointer">
                 <CardContent className="p-6 flex items-start gap-4">
                   <Icon name={item.icon as any} size={24} className="text-secondary flex-shrink-0 group-hover:scale-110 transition-transform" />
                   <div>
@@ -160,7 +160,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               Кто будет <span className="text-primary glow-text">вести</span> программу
             </h2>
           </div>
-          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl">
             <CardContent className="p-6 sm:p-8 md:p-10">
               <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-center md:items-start">
                 <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
@@ -205,7 +205,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               Где будет проходить <span className="text-accent">интенсив</span>
             </h2>
           </div>
-          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl">
             <CardContent className="p-6 sm:p-8 md:p-10 space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
@@ -234,14 +234,14 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
 
               <div className="border-t border-primary/20 pt-6">
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/30">
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/20">
                     <Icon name="MapPin" size={20} className="text-accent flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-sm">Адрес</p>
                       <p className="text-xs sm:text-sm text-muted-foreground">Приморский край, полуостров Песчаный (г. Владивосток), с. Береговое, ул. Арсеньева 10В</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/30">
+                  <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/20">
                     <Icon name="Calendar" size={20} className="text-secondary flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-sm">Даты</p>
@@ -263,7 +263,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               Как к нам <span className="text-secondary">добраться?</span>
             </h2>
           </div>
-          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl">
             <CardContent className="p-6 sm:p-8 md:p-10">
               <p className="text-center text-base sm:text-lg font-semibold text-foreground mb-6">
                 Вы можете добраться до базы отдыха удобным для вас способом:
@@ -321,7 +321,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               Как мы будем <span className="text-primary">жить</span>
             </h2>
           </div>
-          <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl overflow-hidden">
+          <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl overflow-hidden">
             <CardContent className="p-0">
               <AccommodationCarousel />
             </CardContent>

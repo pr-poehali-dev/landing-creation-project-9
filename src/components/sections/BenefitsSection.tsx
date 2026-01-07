@@ -47,7 +47,7 @@ const BenefitsSection = () => {
               stat: '⚡ 2x скорость'
             }
           ].map((item, index) => (
-            <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer shadow-xl">
+            <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer shadow-xl">
               <CardContent className="p-5 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-start">
                   <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all`}>
