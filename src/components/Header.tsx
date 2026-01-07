@@ -16,12 +16,18 @@ const Header = ({ onOpenForm }: HeaderProps) => {
           <span className="text-primary glow-text">пИИонерский</span>
           <span className="text-secondary ml-2">ЛАГЕРЬ</span>
         </div>
-        <div className="hidden md:flex gap-8 items-center">
-          <a href="#program" className="hover:text-primary transition-colors">Программа</a>
-          <a href="#benefits" className="hover:text-secondary transition-colors">Преимущества</a>
-          <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
-          <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
-          <Button onClick={() => onOpenForm('module01')} className="bg-primary hover:bg-primary/90 pulse-glow">
+        <div className="hidden md:flex gap-4 lg:gap-6 items-center">
+          <a href="#program" className="hover:text-primary transition-colors text-sm lg:text-base">Программа</a>
+          <a href="#benefits" className="hover:text-secondary transition-colors text-sm lg:text-base">Преимущества</a>
+          <a href="#faq" className="hover:text-accent transition-colors text-sm lg:text-base">FAQ</a>
+          <a href="#contacts" className="hover:text-primary transition-colors text-sm lg:text-base">Контакты</a>
+          <Button size="sm" variant="outline" className="border-secondary text-secondary hover:bg-secondary/10" asChild>
+            <a href="https://t.me/DashaChernikova8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+              <Icon name="Send" className="mr-1" size={14} />
+              Задать вопрос
+            </a>
+          </Button>
+          <Button size="sm" onClick={() => onOpenForm('module01')} className="bg-primary hover:bg-primary/90 pulse-glow">
             Записаться
           </Button>
         </div>
@@ -41,6 +47,12 @@ const Header = ({ onOpenForm }: HeaderProps) => {
             <a href="#benefits" className="hover:text-secondary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Преимущества</a>
             <a href="#faq" className="hover:text-accent transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
             <a href="#contacts" className="hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
+            <Button variant="outline" className="w-full border-secondary text-secondary hover:bg-secondary/10" asChild>
+              <a href="https://t.me/DashaChernikova8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center" onClick={() => setMobileMenuOpen(false)}>
+                <Icon name="Send" className="mr-2" size={16} />
+                Задать вопрос
+              </a>
+            </Button>
             <Button onClick={() => { onOpenForm('module01'); setMobileMenuOpen(false); }} className="w-full bg-primary pulse-glow">
               Записаться
             </Button>
