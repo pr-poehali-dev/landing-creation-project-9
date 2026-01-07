@@ -5,7 +5,7 @@ import urllib.request
 import urllib.parse
 
 def handler(event: dict, context) -> dict:
-    '''Обработка заявок с формы: отправка в Telegram и Google Sheets'''
+    '''Обработка заявок с формы: отправка в Telegram'''
     
     method = event.get('httpMethod', 'POST')
     
@@ -54,32 +54,26 @@ def handler(event: dict, context) -> dict:
         telegram_token = os.environ.get('TELEGRAM_BOT_TOKEN')
         telegram_chat_id = os.environ.get('TELEGRAM_CHAT_ID')
         
-        if telegram_token and telegram_chat_id:
-            send_telegram_notification(
-                telegram_token, 
-                telegram_chat_id, 
-                name, 
-                email, 
-                telegram, 
-                role, 
-                form_type, 
-                timestamp
-            )
+        if not telegram_token or not telegram_chat_id:
+            return {
+                'statusCode': 500,
+                'headers': {
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
+                },
+                'body': json.dumps({'error': 'Telegram не настроен'})
+            }
         
-        google_creds = os.environ.get('GOOGLE_SHEETS_CREDENTIALS')
-        google_sheet_id = os.environ.get('GOOGLE_SHEET_ID')
-        
-        if google_creds and google_sheet_id:
-            save_to_google_sheets(
-                google_creds,
-                google_sheet_id,
-                timestamp,
-                name,
-                email,
-                telegram,
-                role,
-                form_type
-            )
+        send_telegram_notification(
+            telegram_token, 
+            telegram_chat_id, 
+            name, 
+            email, 
+            telegram, 
+            role, 
+            form_type, 
+            timestamp
+        )
         
         return {
             'statusCode': 200,
@@ -128,23 +122,3 @@ def send_telegram_notification(token: str, chat_id: str, name: str, email: str, 
     data = urllib.parse.urlencode(params).encode('utf-8')
     req = urllib.request.Request(url, data=data)
     urllib.request.urlopen(req)
-
-
-def save_to_google_sheets(creds_json: str, sheet_id: str, timestamp: str, name: str, email: str, telegram: str, role: str, form_type: str):
-    '''Сохранение заявки в Google Sheets'''
-    
-    import gspread
-    from oauth2client.service_account import ServiceAccountCredentials
-    
-    creds_dict = json.loads(creds_json)
-    
-    scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
-    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
-    client = gspread.authorize(creds)
-    
-    sheet = client.open_by_key(sheet_id).sheet1
-    
-    module_name = 'HUMAN + AI' if form_type == 'module01' else 'VIBE MARKETING'
-    
-    row = [timestamp, module_name, name, email, telegram, role]
-    sheet.append_row(row)
