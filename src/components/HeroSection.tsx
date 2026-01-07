@@ -66,7 +66,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
             </Card>
             <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 flex flex-col items-center gap-2">
-                <Icon name="Palmtree" size={32} className="text-accent" style={{animation: 'float 3s ease-in-out infinite'}} />
+                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60970.png" alt="Практический формат" className="w-8 h-8" style={{animation: 'float 3s ease-in-out infinite'}} />
                 <p className="font-semibold">Практический формат</p>
                 <p className="text-sm text-muted-foreground">Без воды и теории</p>
               </CardContent>
