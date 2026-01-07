@@ -92,18 +92,18 @@ const Index = () => {
         <Header onOpenForm={openForm} />
 
         {showForm && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-fade-in" onClick={() => setShowForm(false)}>
-            <Card className="w-full max-w-md neon-border bg-card/95 backdrop-blur-xl animate-scale-in" onClick={(e) => e.stopPropagation()}>
-              <CardContent className="p-6">
-                <div className="flex justify-between items-center mb-6">
-                  <h3 className="text-xl font-bold">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-fade-in overflow-y-auto" onClick={() => setShowForm(false)}>
+            <Card className="w-full max-w-md my-8 neon-border bg-card/95 backdrop-blur-xl animate-scale-in" onClick={(e) => e.stopPropagation()}>
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex justify-between items-center mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl font-bold">
                     {formType === 'module01' ? 'HUMAN + AI' : 'VIBE MARKETING'}
                   </h3>
                   <Button variant="ghost" size="icon" onClick={() => setShowForm(false)}>
                     <Icon name="X" size={20} />
                   </Button>
                 </div>
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                   <div>
                     <Input 
                       placeholder="ФИО *" 
@@ -141,7 +141,7 @@ const Index = () => {
                       onChange={(e) => setAgreedToTerms(e.target.checked)}
                       className="mt-1 cursor-pointer"
                     />
-                    <label htmlFor="terms" className="text-xs text-muted-foreground">
+                    <label htmlFor="terms" className="text-xs sm:text-sm text-muted-foreground cursor-pointer">
                       Я ознакомлен(а) с{' '}
                       <button 
                         type="button"

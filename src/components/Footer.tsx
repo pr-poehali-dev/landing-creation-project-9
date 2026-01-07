@@ -3,8 +3,8 @@ import Icon from '@/components/ui/icon';
 const Footer = () => {
   return (
     <footer className="py-8 sm:py-10 md:py-12 px-4 border-t border-primary/20 bg-card/80 backdrop-blur-xl shadow-lg">
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
+      <div className="container mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
               <span className="text-primary glow-text">пИИонерский</span>
@@ -35,8 +35,8 @@ const Footer = () => {
                 Telegram: Хакни Нейросети
               </a>
               <a href="tel:+79811292499" className="block hover:text-primary transition-colors flex items-center gap-2 group">
-                <Icon name="Phone" size={14} className="group-hover:scale-110 transition-transform" />
-                +7 981 129-24-99 (Дарья)
+                <Icon name="Phone" size={14} className="group-hover:scale-110 transition-transform flex-shrink-0" />
+                <span className="break-words">+7 981 129-24-99 (Дарья)</span>
               </a>
             </div>
           </div>

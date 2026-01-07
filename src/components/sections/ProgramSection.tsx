@@ -13,7 +13,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
   return (
     <>
       <section id="program" className="py-12 sm:py-16 md:py-20 px-4 bg-muted/5">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
             <Badge className="bg-primary/20 text-primary border-primary/50 mb-3 sm:mb-4 text-xs sm:text-sm">ПРОГРАММА</Badge>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-2">
@@ -35,7 +35,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                 </p>
               </div>
 
-              <div className="grid sm:grid-cols-3 gap-4 p-6 rounded-xl bg-muted/30">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 rounded-xl bg-muted/30">
                 <div className="text-center">
                   <Icon name="Sparkles" size={32} className="text-primary mx-auto mb-2 animate-pulse" />
                   <p className="text-2xl font-bold">7</p>
@@ -58,7 +58,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   <Icon name="Waves" size={24} className="text-primary" style={{animation: 'float 2s ease-in-out infinite'}} />
                   Что вы создадите
                 </h4>
-                <div className="grid gap-3">
+                <div className="grid gap-3 sm:gap-4">
                   {[
                     { icon: 'Cpu', title: 'Второй мозг и умная база знаний', description: 'Структурированное хранилище идей и решений с доступом за секунды' },
                     { icon: 'Bot', title: 'Персональный AI-ассистент', description: 'От личных дневников до бизнес-аналитики и документов' },
@@ -68,13 +68,13 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                     { icon: 'Sparkles', title: 'Нейро-фотосессии топ-уровня', description: 'Визуалы дороже стоковых решений для вашего бренда' },
                     { icon: 'Presentation', title: 'Презентации от 50 000 ₽', description: 'Продающие PPT для клиентов и своих запусков' }
                   ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-all group cursor-pointer border border-transparent hover:border-primary/30">
+                    <div key={index} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-all group cursor-pointer border border-transparent hover:border-primary/30">
                       <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                        <Icon name={item.icon as any} size={20} className="text-primary" />
+                        <Icon name={item.icon as any} size={18} className="text-primary" />
                       </div>
-                      <div className="flex-1">
-                        <h5 className="font-semibold mb-1 group-hover:text-primary transition-colors">{item.title}</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                      <div className="flex-1 min-w-0">
+                        <h5 className="font-semibold mb-1 group-hover:text-primary transition-colors text-sm sm:text-base">{item.title}</h5>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   ))}

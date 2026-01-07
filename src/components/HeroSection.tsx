@@ -10,8 +10,8 @@ interface HeroSectionProps {
 
 const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
   return (
-    <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 relative">
-      <div className="container mx-auto relative">
+    <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 relative overflow-hidden">
+      <div className="container mx-auto max-w-7xl relative">
         <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 -z-0 opacity-30 md:opacity-50 animate-float">
           <img 
             src="https://cdn.poehali.dev/files/freepik__-ai-__60961.png" 
@@ -33,10 +33,10 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
               П<span className="text-accent glow-text-accent animate-pulse">ИИ</span>ОНЕРСКИЙ ЛАГЕРЬ 18+ · ЛЕТО 2026
             </Badge>
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight px-2 hero-title">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight px-2 hero-title">
             Как <span className="hero-accent">капитаны ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto px-2">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
             4 дня в пИИонерском лагере, где вы соберёте свой AI-стек: второй мозг, ассистенты, сайты, презентации и личную систему продуктивности.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4">
@@ -52,7 +52,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-12">
             <Card className="neon-border bg-card/95 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 sm:p-5 flex flex-col items-center gap-2">
                 <Icon name="Sun" size={32} className="text-secondary animate-spin" style={{animationDuration: '8s'}} />

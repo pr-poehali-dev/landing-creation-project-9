@@ -91,8 +91,8 @@ const AccommodationCarousel = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+    <div className="relative w-full">
+      <div className="relative aspect-[16/10] overflow-hidden bg-muted rounded-lg">
         <img
           src={images[currentIndex].url}
           alt={images[currentIndex].title}
@@ -129,7 +129,7 @@ const AccommodationCarousel = () => {
         </Button>
       </div>
 
-      <div className="flex justify-center gap-2 p-4 bg-muted/30">
+      <div className="flex flex-wrap justify-center gap-2 p-4 bg-muted/30">
         {images.map((_, index) => (
           <button
             key={index}
@@ -144,7 +144,7 @@ const AccommodationCarousel = () => {
         ))}
       </div>
 
-      <div className="p-6 sm:p-8 md:p-10 bg-gradient-to-br from-primary/5 to-accent/5">
+      <div className="p-4 sm:p-6 md:p-8 lg:p-10 bg-gradient-to-br from-primary/5 to-accent/5">
         <h3 className="text-xl sm:text-2xl font-bold text-center mb-6 text-primary">
           Условия проживания
         </h3>
@@ -154,7 +154,7 @@ const AccommodationCarousel = () => {
             <h4 className="text-lg sm:text-xl font-bold text-secondary mb-4">ЮЖНЫЙ КОРПУС</h4>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 mb-6">
             <div className="flex items-start gap-3 p-4 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/10">
               <Icon name="Users" size={24} className="text-primary flex-shrink-0 mt-0.5" />
               <div>
