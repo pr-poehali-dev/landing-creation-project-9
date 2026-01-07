@@ -12,8 +12,7 @@ const Index = () => {
   const [placesLeft, setPlacesLeft] = useState(19);
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
-    telegram: '',
+    phone: '',
     role: ''
   });
   const [showForm, setShowForm] = useState(false);
@@ -44,9 +43,9 @@ const Index = () => {
       const result = await response.json();
 
       if (response.ok) {
-        alert('Спасибо! Мы свяжемся с вами в Telegram в ближайшее время.');
+        alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
         setShowForm(false);
-        setFormData({ name: '', email: '', telegram: '', role: '' });
+        setFormData({ name: '', phone: '', role: '' });
       } else {
         alert(result.error || 'Произошла ошибка. Попробуйте еще раз.');
       }
@@ -89,7 +88,7 @@ const Index = () => {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <Input 
-                      placeholder="Имя *" 
+                      placeholder="ФИО *" 
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -98,33 +97,23 @@ const Index = () => {
                   </div>
                   <div>
                     <Input 
-                      type="email" 
-                      placeholder="Email *" 
+                      type="tel" 
+                      placeholder="Номер телефона *" 
                       required
-                      value={formData.email}
-                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      value={formData.phone}
+                      onChange={(e) => setFormData({...formData, phone: e.target.value})}
                       className="bg-muted/50 border-primary/30"
                     />
                   </div>
                   <div>
                     <Input 
-                      placeholder="Telegram @username *" 
+                      placeholder="Чем вы занимаетесь? *" 
                       required
-                      value={formData.telegram}
-                      onChange={(e) => setFormData({...formData, telegram: e.target.value})}
+                      value={formData.role}
+                      onChange={(e) => setFormData({...formData, role: e.target.value})}
                       className="bg-muted/50 border-primary/30"
                     />
                   </div>
-                  {formType === 'module01' && (
-                    <div>
-                      <Input 
-                        placeholder="Чем вы занимаетесь?" 
-                        value={formData.role}
-                        onChange={(e) => setFormData({...formData, role: e.target.value})}
-                        className="bg-muted/50 border-primary/30"
-                      />
-                    </div>
-                  )}
                   <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
                     {formType === 'module01' ? 'Забронировать место' : 'Встать в лист ожидания'}
                   </Button>

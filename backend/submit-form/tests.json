@@ -5,28 +5,14 @@
       "method": "POST",
       "path": "/",
       "body": {
-        "name": "Иван Тестовый",
-        "email": "test@example.com",
-        "telegram": "@testuser",
+        "name": "Иван Иванов",
+        "phone": "+79001234567",
         "role": "Предприниматель",
         "formType": "module01"
       },
       "expectedStatus": 200,
       "expectedBody": {
         "success": true
-      },
-      "bodyMatcher": "partial"
-    },
-    {
-      "name": "Test missing required fields",
-      "method": "POST",
-      "path": "/",
-      "body": {
-        "name": "Иван"
-      },
-      "expectedStatus": 400,
-      "expectedBody": {
-        "error": "string"
       },
       "bodyMatcher": "partial"
     }

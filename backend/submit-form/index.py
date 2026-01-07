@@ -5,7 +5,7 @@ import urllib.request
 import urllib.parse
 
 def handler(event: dict, context) -> dict:
-    '''Обработка заявок с формы: отправка уведомлений в Telegram'''
+    '''Обработка заявок: ФИО, телефон, род деятельности -> Telegram'''
     
     method = event.get('httpMethod', 'POST')
     
@@ -34,12 +34,11 @@ def handler(event: dict, context) -> dict:
         data = json.loads(event.get('body', '{}'))
         
         name = data.get('name', '')
-        email = data.get('email', '')
-        telegram = data.get('telegram', '')
+        phone = data.get('phone', '')
         role = data.get('role', '')
         form_type = data.get('formType', 'module01')
         
-        if not name or not email or not telegram:
+        if not name or not phone or not role:
             return {
                 'statusCode': 400,
                 'headers': {
@@ -64,16 +63,7 @@ def handler(event: dict, context) -> dict:
                 'body': json.dumps({'error': 'Telegram не настроен'})
             }
         
-        send_telegram_notification(
-            telegram_token, 
-            telegram_chat_id, 
-            name, 
-            email, 
-            telegram, 
-            role, 
-            form_type, 
-            timestamp
-        )
+        send_telegram_notification(telegram_token, telegram_chat_id, name, phone, role, form_type, timestamp)
         
         return {
             'statusCode': 200,
@@ -95,29 +85,14 @@ def handler(event: dict, context) -> dict:
         }
 
 
-def send_telegram_notification(token: str, chat_id: str, name: str, email: str, telegram: str, role: str, form_type: str, timestamp: str):
+def send_telegram_notification(token: str, chat_id: str, name: str, phone: str, role: str, form_type: str, timestamp: str):
     '''Отправка уведомления в Telegram'''
-    
     module_name = 'HUMAN + AI' if form_type == 'module01' else 'VIBE MARKETING'
     
-    message = f"""🚀 Новая заявка на кэмп!
-
-📋 Модуль: {module_name}
-👤 Имя: {name}
-📧 Email: {email}
-💬 Telegram: {telegram}"""
-    
-    if role:
-        message += f"\n💼 Чем занимается: {role}"
-    
-    message += f"\n\n🕐 Время: {timestamp}"
+    message = f"Новая заявка на кэмп!\n\nМодуль: {module_name}\nФИО: {name}\nТелефон: {phone}\nЧем занимается: {role}\n\nВремя: {timestamp}"
     
     url = f"https://api.telegram.org/bot{token}/sendMessage"
-    params = {
-        'chat_id': chat_id,
-        'text': message,
-        'parse_mode': 'HTML'
-    }
+    params = {'chat_id': chat_id, 'text': message}
     
     data = urllib.parse.urlencode(params).encode('utf-8')
     req = urllib.request.Request(url, data=data)
