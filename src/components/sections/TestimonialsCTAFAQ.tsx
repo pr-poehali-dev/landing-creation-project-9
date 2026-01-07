@@ -12,54 +12,6 @@ interface TestimonialsCTAFAQProps {
 const TestimonialsCTAFAQ = ({ placesLeft, onOpenForm }: TestimonialsCTAFAQProps) => {
   return (
     <>
-      <section className="py-12 sm:py-16 md:py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <Badge className="bg-secondary/20 text-secondary border-secondary/50 mb-3 sm:mb-4 text-xs sm:text-sm">ОТЗЫВЫ</Badge>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold px-2">
-              Что говорят <span className="text-secondary">участники</span>
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
-            {[
-              {
-                quote: 'Мастер-класс прошел очень живо. Люди получили практичное понимание, какие процессы можно упростить с ИИ уже завтра.',
-                author: 'Павел Недостоев',
-                role: 'CEO EVENT MBA',
-                rating: 5
-              },
-              {
-                quote: 'Один из самых ярких докладов: сложные технические детали были донесены доступно и креативно.',
-                author: 'Иван Юницкий',
-                role: 'IT-предприниматель, вожатый кэмпа',
-                rating: 5
-              }
-            ].map((item, index) => (
-              <Card key={index} className="neon-border bg-card/95 backdrop-blur-xl hover:scale-105 transition-transform shadow-xl">
-                <CardContent className="p-5 sm:p-6 space-y-3 sm:space-y-4">
-                  <div className="flex gap-1 mb-2">
-                    {Array.from({ length: item.rating }).map((_, i) => (
-                      <Icon key={i} name="Star" size={18} className="text-secondary fill-secondary animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />
-                    ))}
-                  </div>
-                  <Icon name="Quote" size={32} className="text-primary/30 animate-pulse" />
-                  <p className="text-lg italic leading-relaxed">"{item.quote}"</p>
-                  <div className="flex items-center gap-3 pt-4 border-t border-primary/10">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                      <Icon name="User" size={24} />
-                    </div>
-                    <div>
-                      <p className="font-semibold">{item.author}</p>
-                      <p className="text-sm text-muted-foreground">{item.role}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-12 sm:py-16 md:py-20 px-4 bg-muted/5">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12">
