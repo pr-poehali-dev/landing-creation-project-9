@@ -10,9 +10,17 @@ interface HeroSectionProps {
 
 const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
   return (
-    <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4">
-      <div className="container mx-auto">
-        <div className="max-w-5xl mx-auto text-center space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in">
+    <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 relative">
+      <div className="container mx-auto relative">
+        <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 -z-0 opacity-30 md:opacity-50 animate-float">
+          <img 
+            src="https://cdn.poehali.dev/files/freepik__-ai-__60961.png" 
+            alt="AI Pioneer Logo" 
+            className="w-full h-auto"
+            style={{ transform: 'rotate(-8deg)' }}
+          />
+        </div>
+        <div className="max-w-5xl mx-auto text-center space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in relative z-10">
           <Badge variant="outline" className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 border-primary/50 text-primary shimmer">
             ПИИОНЕРСКИЙ ЛАГЕРЬ 18+ · ЛЕТО 2026
           </Badge>

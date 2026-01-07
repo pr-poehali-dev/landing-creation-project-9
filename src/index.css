@@ -237,4 +237,18 @@
       transform: translateY(-10px);
     }
   }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: rotate(-8deg) translateY(0px);
+    }
+    50% {
+      transform: rotate(-8deg) translateY(-20px);
+    }
+  }
 }
