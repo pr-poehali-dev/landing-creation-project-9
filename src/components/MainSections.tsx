@@ -359,7 +359,7 @@ const MainSections = ({ placesLeft, onOpenForm }: MainSectionsProps) => {
                     <Icon name="MapPin" size={20} className="text-accent flex-shrink-0" />
                     <div>
                       <p className="font-semibold text-sm">Адрес</p>
-                      <p className="text-xs sm:text-sm text-muted-foreground">Полуостров Песчаный, Владивосток, Приморский край</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">Приморский край, полуостров Песчаный (г. Владивосток), с. Береговое, ул. Арсеньева 10В</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/30">
