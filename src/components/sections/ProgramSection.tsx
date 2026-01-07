@@ -269,7 +269,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               <div className="flex flex-col lg:flex-row gap-6">
                 <div className="lg:w-1/2 rounded-lg overflow-hidden border-4 border-primary/20 flex-shrink-0">
                   <img 
-                    src="https://cdn.poehali.dev/files/плесы.png" 
+                    src="https://cdn.poehali.dev/files/Screenshot (5).png" 
                     alt="Карта проезда" 
                     className="w-full h-full object-cover"
                   />
