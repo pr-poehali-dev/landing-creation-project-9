@@ -10,7 +10,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-card/50 border-b border-primary/20 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-card/30 border-b border-primary/20 shadow-lg">
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <img 
