@@ -176,7 +176,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   <div className="space-y-3 text-sm sm:text-base text-muted-foreground">
                     <div className="flex items-start gap-3">
                       <Icon name="Award" size={20} className="text-secondary flex-shrink-0 mt-0.5" />
-                      <p>12+ лет опыта в области искусственного интеллекта и машинного обучения</p>
+                      <p>12+ лет опыта в области маркетинга, продвижения, искусственного интеллекта и машинного обучения</p>
                     </div>
                     <div className="flex items-start gap-3">
                       <Icon name="Users" size={20} className="text-secondary flex-shrink-0 mt-0.5" />
