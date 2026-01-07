@@ -10,17 +10,9 @@ interface HeroSectionProps {
 
 const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
   return (
-    <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 relative overflow-hidden">
+    <section className="pt-24 sm:pt-28 md:pt-32 pb-8 sm:pb-12 md:pb-16 px-4 relative overflow-hidden">
       <div className="container mx-auto max-w-7xl relative">
-        <div className="absolute top-0 right-0 w-32 sm:w-48 md:w-64 lg:w-80 xl:w-96 -z-0 opacity-30 md:opacity-50 animate-float">
-          <img 
-            src="https://cdn.poehali.dev/files/freepik__-ai-__60961.png" 
-            alt="AI Pioneer Logo" 
-            className="w-full h-auto"
-            style={{ transform: 'rotate(-8deg)' }}
-          />
-        </div>
-        <div className="max-w-5xl mx-auto text-center space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in relative z-10">
+        <div className="max-w-5xl mx-auto text-center space-y-3 sm:space-y-4 md:space-y-6 animate-fade-in relative z-10">
           <div className="relative inline-block">
             <div className="absolute inset-0 flex items-center justify-center opacity-20 scale-[1.8]">
               <img 
@@ -33,10 +25,10 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
               <span className="inline-flex items-baseline">П<span className="text-accent glow-text-accent animate-pulse">ИИ</span>ОНЕРСКИЙ ЛАГЕРЬ</span> · ЛЕТО 2026
             </Badge>
           </div>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight px-2 hero-title">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight px-2 hero-title">
             Как <span className="hero-accent">капитаны ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
           </h1>
-          <div className="max-w-4xl mx-auto px-2 py-4">
+          <div className="max-w-4xl mx-auto px-2 py-2">
             <img 
               src="https://cdn.poehali.dev/files/freepik__-all-inclusive-ai-__60964.png" 
               alt="Всё включено - ALL INCLUSIVE" 
