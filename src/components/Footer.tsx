@@ -6,11 +6,11 @@ const Footer = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-              <span className="text-primary glow-text">пИИонерский</span>
-              <br />
-              <span className="text-secondary">ЛАГЕРЬ</span>
-            </h3>
+            <img 
+              src="https://cdn.poehali.dev/files/freepik__-ai-__60966.png" 
+              alt="пИИонерский ЛАГЕРЬ" 
+              className="w-full max-w-xs mb-3 sm:mb-4"
+            />
             <p className="text-muted-foreground text-xs sm:text-sm">AI-интенсив для предпринимателей и творцов</p>
           </div>
           <div>
