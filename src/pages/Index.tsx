@@ -20,6 +20,15 @@ const Index = () => {
   const [showOferta, setShowOferta] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
   const [formType, setFormType] = useState<'module01' | 'module02'>('module01');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 500);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,6 +71,10 @@ const Index = () => {
     setFormType(type);
     setShowForm(true);
     setAgreedToTerms(false);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -196,6 +209,17 @@ const Index = () => {
         <MainSections placesLeft={placesLeft} onOpenForm={openForm} />
         <Footer />
       </div>
+
+      <Button
+        onClick={scrollToTop}
+        size="icon"
+        className={`fixed bottom-8 right-8 z-40 rounded-full bg-primary hover:bg-primary/90 shadow-lg transition-all duration-300 ${
+          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16 pointer-events-none'
+        } animate-bounce-slow`}
+        aria-label="Вернуться наверх"
+      >
+        <Icon name="ArrowUp" size={24} />
+      </Button>
     </div>
   );
 };
