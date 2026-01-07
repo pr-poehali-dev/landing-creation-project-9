@@ -21,9 +21,14 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           />
         </div>
         <div className="max-w-5xl mx-auto text-center space-y-4 sm:space-y-6 md:space-y-8 animate-fade-in relative z-10">
-          <Badge variant="outline" className="text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2 border-primary/50 text-primary shimmer">
-            ПИИОНЕРСКИЙ ЛАГЕРЬ 18+ · ЛЕТО 2026
-          </Badge>
+          <div className="relative inline-block">
+            <div className="absolute inset-0 flex items-center justify-center opacity-20 scale-150">
+              <Icon name="Ship" size={80} className="text-primary animate-spin-slow" />
+            </div>
+            <Badge variant="outline" className="text-sm sm:text-base md:text-lg px-4 sm:px-6 py-2 sm:py-3 border-primary/70 bg-card/80 backdrop-blur-sm relative z-10 font-bold tracking-wide badge-ocean">
+              П<span className="text-accent glow-text-accent animate-pulse">ИИ</span>ОНЕРСКИЙ ЛАГЕРЬ 18+ · ЛЕТО 2026
+            </Badge>
+          </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight px-2 hero-title">
             Как <span className="hero-accent">капитаны ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
           </h1>

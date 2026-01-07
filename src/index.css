@@ -302,4 +302,48 @@
     border-radius: 2px;
     animation: shimmer 3s infinite;
   }
+
+  .glow-text-accent {
+    text-shadow:
+      0 0 20px hsl(var(--accent)),
+      0 0 40px hsl(var(--accent)),
+      0 0 60px hsl(var(--accent));
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .badge-ocean {
+    box-shadow:
+      0 0 20px rgba(52, 211, 153, 0.3),
+      0 0 40px rgba(56, 189, 248, 0.2),
+      inset 0 0 20px rgba(56, 189, 248, 0.1);
+    animation: wave-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes wave-pulse {
+    0%,
+    100% {
+      box-shadow:
+        0 0 20px rgba(52, 211, 153, 0.3),
+        0 0 40px rgba(56, 189, 248, 0.2),
+        inset 0 0 20px rgba(56, 189, 248, 0.1);
+    }
+    50% {
+      box-shadow:
+        0 0 30px rgba(52, 211, 153, 0.5),
+        0 0 60px rgba(56, 189, 248, 0.4),
+        inset 0 0 30px rgba(56, 189, 248, 0.2);
+    }
+  }
 }
