@@ -25,7 +25,7 @@ const OfertaModal = ({ showOferta, onClose }: OfertaModalProps) => {
             <h2 className="text-lg font-semibold text-foreground">на оказание информационно-консультационных услуг</h2>
             
             <p><strong>г. Владивосток</strong></p>
-            <p><strong>Дата публикации: «___» ____________ 2026 г.</strong></p>
+            <p><strong>Дата публикации: «16» января 2026 г.</strong></p>
             
             <hr className="my-4 border-primary/20" />
             
