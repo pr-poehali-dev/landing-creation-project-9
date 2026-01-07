@@ -20,6 +20,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
           <a href="#program" className="hover:text-primary transition-colors">Программа</a>
           <a href="#benefits" className="hover:text-secondary transition-colors">Преимущества</a>
           <a href="#faq" className="hover:text-accent transition-colors">FAQ</a>
+          <a href="#contacts" className="hover:text-primary transition-colors">Контакты</a>
           <Button onClick={() => onOpenForm('module01')} className="bg-primary hover:bg-primary/90 pulse-glow">
             Записаться
           </Button>
@@ -39,6 +40,7 @@ const Header = ({ onOpenForm }: HeaderProps) => {
             <a href="#program" className="hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Программа</a>
             <a href="#benefits" className="hover:text-secondary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Преимущества</a>
             <a href="#faq" className="hover:text-accent transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
+            <a href="#contacts" className="hover:text-primary transition-colors py-2" onClick={() => setMobileMenuOpen(false)}>Контакты</a>
             <Button onClick={() => { onOpenForm('module01'); setMobileMenuOpen(false); }} className="w-full bg-primary pulse-glow">
               Записаться
             </Button>

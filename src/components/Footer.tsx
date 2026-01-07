@@ -24,19 +24,19 @@ const Footer = () => {
               <a href="#faq" className="block hover:text-accent transition-colors">FAQ</a>
             </div>
           </div>
-          <div>
+          <div id="contacts">
             <h4 className="font-semibold mb-4 flex items-center gap-2">
               <Icon name="MessageCircle" size={18} className="text-secondary" />
               Контакты
             </h4>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <a href="https://t.me/ТОЧКИ_НАД_ИИ" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors flex items-center gap-2 group">
+              <a href="https://t.me/chernikovgpt" target="_blank" rel="noopener noreferrer" className="block hover:text-primary transition-colors flex items-center gap-2 group">
                 <Icon name="Send" size={14} className="group-hover:translate-x-1 transition-transform" />
-                Telegram: ТОЧКИ НАД ИИ
+                Telegram: Хакни Нейросети
               </a>
-              <a href="mailto:support@точкинадии.ru" className="block hover:text-primary transition-colors flex items-center gap-2 group">
-                <Icon name="Mail" size={14} className="group-hover:scale-110 transition-transform" />
-                support@точкинадии.ru
+              <a href="tel:+79811292499" className="block hover:text-primary transition-colors flex items-center gap-2 group">
+                <Icon name="Phone" size={14} className="group-hover:scale-110 transition-transform" />
+                +7 981 129-24-99 (Дарья)
               </a>
             </div>
           </div>
