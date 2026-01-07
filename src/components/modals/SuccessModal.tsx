@@ -14,6 +14,29 @@ const SuccessModal = ({ show, onClose }: SuccessModalProps) => {
   useEffect(() => {
     if (!show || !canvasRef.current) return;
 
+    const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
+    const playSuccessSound = () => {
+      const notes = [523.25, 659.25, 783.99];
+      notes.forEach((freq, i) => {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        oscillator.frequency.value = freq;
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(0.3, audioContext.currentTime + i * 0.1);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + i * 0.1 + 0.3);
+        
+        oscillator.start(audioContext.currentTime + i * 0.1);
+        oscillator.stop(audioContext.currentTime + i * 0.1 + 0.3);
+      });
+    };
+    
+    playSuccessSound();
+
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
