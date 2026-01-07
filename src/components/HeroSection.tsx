@@ -36,9 +36,14 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight px-2 hero-title">
             Как <span className="hero-accent">капитаны ИИ</span> покоряют <span className="hero-accent">океан возможностей</span>, зарабатывая в <span className="hero-accent">3–4 раза больше</span> и работая в <span className="hero-accent">2 раза меньше</span>
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-2">
-            4 дня в пИИонерском лагере, где вы соберёте свой AI-стек: второй мозг, ассистенты, сайты, презентации и личную систему продуктивности.
-          </p>
+          <div className="max-w-4xl mx-auto px-2 py-4">
+            <img 
+              src="https://cdn.poehali.dev/files/freepik__-all-inclusive-ai-__60964.png" 
+              alt="Всё включено - ALL INCLUSIVE" 
+              className="w-full h-auto rounded-xl shadow-2xl neon-border animate-pulse-slow"
+              style={{ animation: 'float 4s ease-in-out infinite' }}
+            />
+          </div>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-2 sm:pt-4">
             <Button size="lg" onClick={() => onOpenForm('module01')} className="text-base sm:text-lg bg-primary hover:bg-primary/90 pulse-glow group w-full sm:w-auto">
               <Icon name="Waves" className="mr-2 group-hover:rotate-12 transition-transform" size={20} />
