@@ -52,7 +52,7 @@ const HeroSection = ({ placesLeft, onOpenForm }: HeroSectionProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-8 sm:pt-12">
             <Card className="neon-border bg-card/50 backdrop-blur-xl shadow-xl">
               <CardContent className="p-4 sm:p-5 flex flex-col items-center gap-2">
-                <Icon name="Sun" size={32} className="text-secondary animate-spin" style={{animationDuration: '8s'}} />
+                <img src="https://cdn.poehali.dev/files/freepik__-ai-__60973.png" alt="Календарь" className="w-8 h-8" />
                 <p className="font-semibold">24–27 июня 2026</p>
                 <p className="text-sm text-muted-foreground">4 дня и 3 ночи</p>
               </CardContent>
