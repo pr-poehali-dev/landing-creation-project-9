@@ -37,6 +37,10 @@ const SuccessModal = ({ show, onClose }: SuccessModalProps) => {
     
     playSuccessSound();
 
+    if (navigator.vibrate) {
+      navigator.vibrate([100, 50, 100, 50, 200]);
+    }
+
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
