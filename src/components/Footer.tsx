@@ -47,7 +47,7 @@ const Footer = () => {
             </h4>
             <div className="space-y-2 text-sm text-muted-foreground">
               <p>ИП Черников Сергей Николаевич</p>
-              <p className="text-xs">ОГРНИП: 3317774600305002</p>
+              <p className="text-xs">ОГРНИП: 321253600091137</p>
             </div>
           </div>
         </div>

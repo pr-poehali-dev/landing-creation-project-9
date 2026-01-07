@@ -15,7 +15,10 @@ const Index = () => {
     phone: '',
     role: ''
   });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [showOferta, setShowOferta] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
   const [formType, setFormType] = useState<'module01' | 'module02'>('module01');
 
   useEffect(() => {
@@ -46,6 +49,7 @@ const Index = () => {
         alert('Спасибо! Мы свяжемся с вами в ближайшее время.');
         setShowForm(false);
         setFormData({ name: '', phone: '', role: '' });
+        setAgreedToTerms(false);
       } else {
         alert(result.error || 'Произошла ошибка. Попробуйте еще раз.');
       }
@@ -57,6 +61,7 @@ const Index = () => {
   const openForm = (type: 'module01' | 'module02') => {
     setFormType(type);
     setShowForm(true);
+    setAgreedToTerms(false);
   };
 
   return (
@@ -114,10 +119,74 @@ const Index = () => {
                       className="bg-muted/50 border-primary/30"
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
+                  <div className="flex items-start gap-2">
+                    <input 
+                      type="checkbox" 
+                      id="terms"
+                      required
+                      checked={agreedToTerms}
+                      onChange={(e) => setAgreedToTerms(e.target.checked)}
+                      className="mt-1 cursor-pointer"
+                    />
+                    <label htmlFor="terms" className="text-xs text-muted-foreground">
+                      Я ознакомлен(а) с{' '}
+                      <button 
+                        type="button"
+                        onClick={(e) => { e.preventDefault(); setShowOferta(true); }}
+                        className="text-primary hover:underline"
+                      >
+                        Договором оферты
+                      </button>
+                      {' '}и{' '}
+                      <button 
+                        type="button"
+                        onClick={(e) => { e.preventDefault(); setShowPrivacy(true); }}
+                        className="text-primary hover:underline"
+                      >
+                        Политикой конфиденциальности
+                      </button>
+                    </label>
+                  </div>
+                  <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={!agreedToTerms}>
                     {formType === 'module01' ? 'Забронировать место' : 'Встать в лист ожидания'}
                   </Button>
                 </form>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {showOferta && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-fade-in" onClick={() => setShowOferta(false)}>
+            <Card className="w-full max-w-2xl neon-border bg-card/95 backdrop-blur-xl animate-scale-in max-h-[80vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold">Договор оферты</h3>
+                  <Button variant="ghost" size="icon" onClick={() => setShowOferta(false)}>
+                    <Icon name="X" size={20} />
+                  </Button>
+                </div>
+                <div className="overflow-y-auto max-h-[60vh] text-sm text-muted-foreground space-y-4">
+                  <p>Текст договора оферты будет добавлен позже.</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+
+        {showPrivacy && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm animate-fade-in" onClick={() => setShowPrivacy(false)}>
+            <Card className="w-full max-w-2xl neon-border bg-card/95 backdrop-blur-xl animate-scale-in max-h-[80vh] overflow-hidden flex flex-col" onClick={(e) => e.stopPropagation()}>
+              <CardContent className="p-6">
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold">Политика конфиденциальности</h3>
+                  <Button variant="ghost" size="icon" onClick={() => setShowPrivacy(false)}>
+                    <Icon name="X" size={20} />
+                  </Button>
+                </div>
+                <div className="overflow-y-auto max-h-[60vh] text-sm text-muted-foreground space-y-4">
+                  <p>Текст политики конфиденциальности будет добавлен позже.</p>
+                </div>
               </CardContent>
             </Card>
           </div>
