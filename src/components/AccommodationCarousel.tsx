@@ -17,6 +17,26 @@ const AccommodationCarousel = () => {
       description: 'Просторный зал для обучения и проведения мастер-классов'
     },
     {
+      url: 'https://cdn.poehali.dev/files/2.jpg',
+      title: 'Летняя веранда',
+      description: 'Открытая терраса с голубыми занавесками и комфортными зонами для отдыха'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/11.jpg',
+      title: 'Танцевальный зал',
+      description: 'Просторный зал для активностей, танцев и групповых занятий'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/20-4.jpg',
+      title: 'Баня и купель',
+      description: 'Комплекс для релаксации с деревянной баней и купелью'
+    },
+    {
+      url: 'https://cdn.poehali.dev/files/1.jpg',
+      title: 'Купель под открытым небом',
+      description: 'Расслабление и восстановление сил на свежем воздухе'
+    },
+    {
       url: 'https://cdn.poehali.dev/files/photo_2026-01-07_16-34-51.jpg',
       title: 'Территория и природа',
       description: 'Живописная территория среди зелени с дорожками для прогулок'
