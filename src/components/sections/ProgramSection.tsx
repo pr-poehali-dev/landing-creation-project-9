@@ -3,7 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AccommodationCarousel from '@/components/AccommodationCarousel';
-import ToolBox from '@/components/ui/ToolBox';
 
 interface ProgramSectionProps {
   placesLeft: number;
@@ -38,9 +37,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 rounded-xl bg-muted/20">
                 <div className="text-center">
-                  <div className="mx-auto mb-2 text-primary">
-                    <ToolBox size={32} />
-                  </div>
+                  <Icon name="Sparkles" size={32} className="text-primary mx-auto mb-2 animate-pulse" />
                   <p className="text-2xl font-bold">7</p>
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
                 </div>
