@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import AccommodationCarousel from '@/components/AccommodationCarousel';
 import ToolsInHand from '@/components/ui/ToolsInHand';
+import WorkingHands from '@/components/ui/WorkingHands';
 
 interface ProgramSectionProps {
   placesLeft: number;
@@ -45,7 +46,9 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
                 </div>
                 <div className="text-center">
-                  <Icon name="Sun" size={32} className="text-secondary mx-auto mb-2 animate-spin" style={{animationDuration: '8s'}} />
+                  <div className="mx-auto mb-2 text-secondary">
+                    <WorkingHands size={32} />
+                  </div>
                   <p className="text-2xl font-bold">100%</p>
                   <p className="text-sm text-muted-foreground">Практика</p>
                 </div>
