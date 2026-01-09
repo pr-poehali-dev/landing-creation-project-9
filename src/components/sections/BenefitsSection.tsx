@@ -1,6 +1,7 @@
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import ReverseClock from '@/components/ui/ReverseClock';
 
 const BenefitsSection = () => {
   return (
@@ -21,7 +22,7 @@ const BenefitsSection = () => {
               description: 'Сократите рутину за счёт AI-ассистентов и автоматизации', 
               color: 'primary',
               stat: '↓ 50% рутины',
-              customImage: 'https://cdn.poehali.dev/files/freepik__-ai-__29398.png'
+              customClock: true
             },
             { 
               icon: 'Sun', 
@@ -51,9 +52,9 @@ const BenefitsSection = () => {
             <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer shadow-xl">
               <CardContent className="p-5 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-start">
-                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-all ${(item as any).customImage ? 'group-hover:animate-spin-reverse' : 'group-hover:rotate-6'}`}>
-                    {(item as any).customImage ? (
-                      <img src={(item as any).customImage} alt="" className="w-10 h-10 object-contain" />
+                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-all ${!(item as any).customClock && 'group-hover:rotate-6'}`}>
+                    {(item as any).customClock ? (
+                      <ReverseClock size={32} />
                     ) : (
                       <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
                     )}
