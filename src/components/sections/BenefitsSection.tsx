@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import ReverseClock from '@/components/ui/ReverseClock';
 import MoneyStack from '@/components/ui/MoneyStack';
-import BrainWithBulb from '@/components/ui/BrainWithBulb';
+import BrainWithRays from '@/components/ui/BrainWithRays';
 
 const BenefitsSection = () => {
   return (
@@ -62,7 +62,7 @@ const BenefitsSection = () => {
                     ) : (item as any).customMoney ? (
                       <MoneyStack size={32} />
                     ) : (item as any).customBrain ? (
-                      <BrainWithBulb size={32} />
+                      <BrainWithRays size={32} />
                     ) : (
                       <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
                     )}
