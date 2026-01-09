@@ -20,7 +20,8 @@ const BenefitsSection = () => {
               subtitle: 'Экономия времени',
               description: 'Сократите рутину за счёт AI-ассистентов и автоматизации', 
               color: 'primary',
-              stat: '↓ 50% рутины'
+              stat: '↓ 50% рутины',
+              customImage: 'https://cdn.poehali.dev/files/freepik__-ai-e63946-ffd60a-000000-ffffff-256x256-__29397.png'
             },
             { 
               icon: 'Sun', 
@@ -51,7 +52,11 @@ const BenefitsSection = () => {
               <CardContent className="p-5 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-start">
                   <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all`}>
-                    <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
+                    {(item as any).customImage ? (
+                      <img src={(item as any).customImage} alt="" className="w-10 h-10 object-contain" />
+                    ) : (
+                      <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
+                    )}
                   </div>
                   <Badge variant="outline" className={`text-${item.color} border-${item.color}/50 text-xs`}>
                     {item.stat}
