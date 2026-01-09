@@ -39,22 +39,22 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 rounded-xl bg-muted/20">
-                <div className="text-center">
-                  <div className="mx-auto mb-2 text-primary">
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 text-primary">
                     <ToolsInHand size={32} />
                   </div>
                   <p className="text-2xl font-bold">7</p>
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
                 </div>
-                <div className="text-center">
-                  <div className="mx-auto mb-2 text-secondary">
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 text-secondary">
                     <WorkingHands size={32} />
                   </div>
                   <p className="text-2xl font-bold">100%</p>
                   <p className="text-sm text-muted-foreground">Практика</p>
                 </div>
-                <div className="text-center">
-                  <div className="mx-auto mb-2 text-accent">
+                <div className="flex flex-col items-center">
+                  <div className="mb-2 text-accent">
                     <IntensiveCalendar size={32} />
                   </div>
                   <p className="text-2xl font-bold">4</p>
