@@ -350,4 +350,17 @@
         inset 0 0 30px rgba(56, 189, 248, 0.2);
     }
   }
+
+  .animate-spin-reverse {
+    animation: spin-reverse 3s linear infinite;
+  }
+
+  @keyframes spin-reverse {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 }
