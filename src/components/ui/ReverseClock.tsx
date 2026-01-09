@@ -26,10 +26,6 @@ const ReverseClock = ({ size = 40 }: { size?: number }) => {
         stroke="currentColor"
         strokeWidth="3"
         strokeLinecap="round"
-        style={{
-          transformOrigin: '50px 50px',
-          animation: 'reverse-hour 43200s linear infinite reverse'
-        }}
       />
       
       <line
@@ -42,7 +38,7 @@ const ReverseClock = ({ size = 40 }: { size?: number }) => {
         strokeLinecap="round"
         style={{
           transformOrigin: '50px 50px',
-          animation: 'reverse-minute 3600s linear infinite reverse'
+          animation: 'reverse-minute 4s linear infinite reverse'
         }}
       />
       
@@ -56,10 +52,6 @@ const ReverseClock = ({ size = 40 }: { size?: number }) => {
       
       <style>
         {`
-          @keyframes reverse-hour {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
           @keyframes reverse-minute {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }
