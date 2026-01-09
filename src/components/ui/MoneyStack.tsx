@@ -8,27 +8,27 @@ const MoneyStack = ({ size = 40 }: { size?: number }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g className="money-bill-1">
-        <rect x="15" y="55" width="70" height="35" rx="3" fill="currentColor" opacity="0.3" />
-        <circle cx="50" cy="72.5" r="8" fill="white" opacity="0.5" />
-        <text x="50" y="77" fontSize="12" fill="white" textAnchor="middle" fontWeight="bold">$</text>
+        <rect x="15" y="55" width="70" height="35" rx="3" fill="#2d7a3e" opacity="0.6" />
+        <circle cx="50" cy="72.5" r="8" fill="#e8f5e9" opacity="0.8" />
+        <text x="50" y="77" fontSize="12" fill="#1b5e20" textAnchor="middle" fontWeight="bold">$</text>
       </g>
       
       <g className="money-bill-2">
-        <rect x="15" y="40" width="70" height="35" rx="3" fill="currentColor" opacity="0.5" />
-        <circle cx="50" cy="57.5" r="8" fill="white" opacity="0.6" />
-        <text x="50" y="62" fontSize="12" fill="white" textAnchor="middle" fontWeight="bold">$</text>
+        <rect x="15" y="40" width="70" height="35" rx="3" fill="#2d7a3e" opacity="0.7" />
+        <circle cx="50" cy="57.5" r="8" fill="#e8f5e9" opacity="0.85" />
+        <text x="50" y="62" fontSize="12" fill="#1b5e20" textAnchor="middle" fontWeight="bold">$</text>
       </g>
       
       <g className="money-bill-3">
-        <rect x="15" y="25" width="70" height="35" rx="3" fill="currentColor" opacity="0.7" />
-        <circle cx="50" cy="42.5" r="8" fill="white" opacity="0.7" />
-        <text x="50" y="47" fontSize="12" fill="white" textAnchor="middle" fontWeight="bold">$</text>
+        <rect x="15" y="25" width="70" height="35" rx="3" fill="#2d7a3e" opacity="0.85" />
+        <circle cx="50" cy="42.5" r="8" fill="#e8f5e9" opacity="0.9" />
+        <text x="50" y="47" fontSize="12" fill="#1b5e20" textAnchor="middle" fontWeight="bold">$</text>
       </g>
       
       <g className="money-bill-4">
-        <rect x="15" y="10" width="70" height="35" rx="3" fill="currentColor" />
-        <circle cx="50" cy="27.5" r="8" fill="white" opacity="0.9" />
-        <text x="50" y="32" fontSize="12" fill="white" textAnchor="middle" fontWeight="bold">$</text>
+        <rect x="15" y="10" width="70" height="35" rx="3" fill="#2d7a3e" />
+        <circle cx="50" cy="27.5" r="8" fill="#e8f5e9" />
+        <text x="50" y="32" fontSize="12" fill="#1b5e20" textAnchor="middle" fontWeight="bold">$</text>
       </g>
       
       <g className="plus-sign">
