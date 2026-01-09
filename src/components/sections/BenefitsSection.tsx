@@ -21,7 +21,7 @@ const BenefitsSection = () => {
               description: 'Сократите рутину за счёт AI-ассистентов и автоматизации', 
               color: 'primary',
               stat: '↓ 50% рутины',
-              customImage: 'https://cdn.poehali.dev/files/freepik__-ai-e63946-ffd60a-000000-ffffff-256x256-__29397.png'
+              customImage: 'https://cdn.poehali.dev/files/freepik__-ai-__29398.png'
             },
             { 
               icon: 'Sun', 
