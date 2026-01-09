@@ -5,6 +5,7 @@ import Icon from '@/components/ui/icon';
 import AccommodationCarousel from '@/components/AccommodationCarousel';
 import ToolsInHand from '@/components/ui/ToolsInHand';
 import WorkingHands from '@/components/ui/WorkingHands';
+import IntensiveCalendar from '@/components/ui/IntensiveCalendar';
 
 interface ProgramSectionProps {
   placesLeft: number;
@@ -53,7 +54,9 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   <p className="text-sm text-muted-foreground">Практика</p>
                 </div>
                 <div className="text-center">
-                  <Icon name="Palmtree" size={32} className="text-accent mx-auto mb-2" style={{animation: 'float 3s ease-in-out infinite'}} />
+                  <div className="mx-auto mb-2 text-accent">
+                    <IntensiveCalendar size={32} />
+                  </div>
                   <p className="text-2xl font-bold">4</p>
                   <p className="text-sm text-muted-foreground">Дня интенсива</p>
                 </div>
