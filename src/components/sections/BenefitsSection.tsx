@@ -2,6 +2,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import ReverseClock from '@/components/ui/ReverseClock';
+import MoneyStack from '@/components/ui/MoneyStack';
 
 const BenefitsSection = () => {
   return (
@@ -30,7 +31,8 @@ const BenefitsSection = () => {
               subtitle: 'Рост заработка',
               description: 'Превратите AI-навыки в монетизацию: новые проекты и продукты', 
               color: 'secondary',
-              stat: '↑ 300% ROI'
+              stat: '↑ 300% ROI',
+              customMoney: true
             },
             { 
               icon: 'Brain', 
@@ -52,9 +54,11 @@ const BenefitsSection = () => {
             <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer shadow-xl">
               <CardContent className="p-5 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-start">
-                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-all ${!(item as any).customClock && 'group-hover:rotate-6'}`}>
+                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-all ${!(item as any).customClock && !(item as any).customMoney && 'group-hover:rotate-6'}`}>
                     {(item as any).customClock ? (
                       <ReverseClock size={32} />
+                    ) : (item as any).customMoney ? (
+                      <MoneyStack size={32} />
                     ) : (
                       <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
                     )}
