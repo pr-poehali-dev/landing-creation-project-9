@@ -4,6 +4,7 @@ import Icon from '@/components/ui/icon';
 import ReverseClock from '@/components/ui/ReverseClock';
 import MoneyStack from '@/components/ui/MoneyStack';
 import BrainWithRays from '@/components/ui/BrainWithRays';
+import AdaptiveSparkles from '@/components/ui/AdaptiveSparkles';
 
 const BenefitsSection = () => {
   return (
@@ -50,19 +51,22 @@ const BenefitsSection = () => {
               subtitle: 'Гибкость в изменениях',
               description: 'ИИ – ваш усилитель для быстрой адаптации к новым вызовам', 
               color: 'primary',
-              stat: '⚡ 2x скорость'
+              stat: '⚡ 2x скорость',
+              customSparkles: true
             }
           ].map((item, index) => (
             <Card key={index} className="neon-border bg-card/50 backdrop-blur-xl hover:scale-105 transition-all duration-300 group cursor-pointer shadow-xl">
               <CardContent className="p-5 sm:p-6 space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-start">
-                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-all ${!(item as any).customClock && !(item as any).customMoney && !(item as any).customBrain && 'group-hover:rotate-6'}`}>
+                  <div className={`w-14 h-14 rounded-xl bg-${item.color}/20 flex items-center justify-center group-hover:scale-110 transition-all ${!(item as any).customClock && !(item as any).customMoney && !(item as any).customBrain && !(item as any).customSparkles && 'group-hover:rotate-6'}`}>
                     {(item as any).customClock ? (
                       <ReverseClock size={32} />
                     ) : (item as any).customMoney ? (
                       <MoneyStack size={32} />
                     ) : (item as any).customBrain ? (
                       <BrainWithRays size={32} />
+                    ) : (item as any).customSparkles ? (
+                      <AdaptiveSparkles size={32} />
                     ) : (
                       <Icon name={item.icon as any} size={28} className={`text-${item.color}`} />
                     )}
