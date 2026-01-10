@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import SupportButton from "@/components/SupportButton";
 import PriceModal from "@/components/PriceModal";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Sonner />
       <SupportButton />
       <PriceModal />
+      <ScrollToTop />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
