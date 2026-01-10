@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import Icon from '@/components/ui/icon';
 import { Input } from '@/components/ui/input';
+import OfertaModal from '@/components/modals/OfertaModal';
+import PrivacyModal from '@/components/modals/PrivacyModal';
 
 const PriceModal = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,6 +14,8 @@ const PriceModal = () => {
   });
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [showOferta, setShowOferta] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -151,7 +155,22 @@ const PriceModal = () => {
                     className="mt-1 cursor-pointer"
                   />
                   <label htmlFor="modal-terms" className="text-xs text-muted-foreground cursor-pointer">
-                    Я ознакомлен(а) с Договором оферты и Политикой конфиденциальности
+                    Я ознакомлен(а) с{' '}
+                    <button 
+                      type="button"
+                      onClick={(e) => { e.preventDefault(); setShowOferta(true); }}
+                      className="text-primary hover:underline"
+                    >
+                      Договором оферты
+                    </button>
+                    {' '}и{' '}
+                    <button 
+                      type="button"
+                      onClick={(e) => { e.preventDefault(); setShowPrivacy(true); }}
+                      className="text-primary hover:underline"
+                    >
+                      Политикой конфиденциальности
+                    </button>
                   </label>
                 </div>
 
@@ -174,6 +193,16 @@ const PriceModal = () => {
           )}
         </div>
       </div>
+
+      <OfertaModal
+        showOferta={showOferta}
+        onClose={() => setShowOferta(false)}
+      />
+
+      <PrivacyModal
+        showPrivacy={showPrivacy}
+        onClose={() => setShowPrivacy(false)}
+      />
     </div>
   );
 };
