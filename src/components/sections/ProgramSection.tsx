@@ -44,7 +44,7 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                     <img 
                       src="https://cdn.poehali.dev/files/freepik__-__18224.png" 
                       alt="AI инструменты" 
-                      className="w-8 h-8 object-contain animate-[spin_4s_linear_infinite]"
+                      className="w-8 h-8 object-contain pulse-glow-icon"
                     />
                   </div>
                   <p className="text-2xl font-bold">7</p>

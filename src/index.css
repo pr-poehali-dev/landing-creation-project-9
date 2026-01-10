@@ -363,4 +363,22 @@
       transform: rotate(-360deg);
     }
   }
+
+  .pulse-glow-icon {
+    animation: pulse-glow-icon 2.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow-icon {
+    0%,
+    100% {
+      transform: scale(1);
+      filter: drop-shadow(0 0 8px rgba(239, 68, 68, 0.4))
+        drop-shadow(0 0 15px rgba(239, 68, 68, 0.2));
+    }
+    50% {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.6))
+        drop-shadow(0 0 35px rgba(239, 68, 68, 0.4));
+    }
+  }
 }
