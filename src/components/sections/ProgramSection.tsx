@@ -63,8 +63,12 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   <p className="text-sm text-muted-foreground">Практика</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="mb-2 text-accent">
-                    <IntensiveCalendar size={32} />
+                  <div className="mb-2">
+                    <img 
+                      src="https://cdn.poehali.dev/files/freepik__-__18223.png" 
+                      alt="4 дня интенсива" 
+                      className="w-8 h-8 object-contain animate-bounce"
+                    />
                   </div>
                   <p className="text-2xl font-bold">4</p>
                   <p className="text-sm text-muted-foreground">Дня интенсива</p>
