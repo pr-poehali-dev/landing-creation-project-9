@@ -42,10 +42,9 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                 <div className="flex flex-col items-center">
                   <div className="mb-2">
                     <img 
-                      src="https://cdn.poehali.dev/files/freepik__-ai-__18221.png" 
+                      src="https://cdn.poehali.dev/files/freepik__-__18224.png" 
                       alt="AI инструменты" 
-                      className="w-8 h-8 object-contain animate-[spin_3s_ease-in-out_infinite]"
-                      style={{ animationDirection: 'alternate' }}
+                      className="w-8 h-8 object-contain animate-[spin_4s_linear_infinite]"
                     />
                   </div>
                   <p className="text-2xl font-bold">7</p>
