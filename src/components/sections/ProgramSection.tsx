@@ -52,8 +52,12 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
                 </div>
                 <div className="flex flex-col items-center">
-                  <div className="mb-2 text-secondary">
-                    <WorkingHands size={32} />
+                  <div className="mb-2">
+                    <img 
+                      src="https://cdn.poehali.dev/files/freepik__-100-__18222.png" 
+                      alt="100% Практика" 
+                      className="w-8 h-8 object-contain animate-pulse"
+                    />
                   </div>
                   <p className="text-2xl font-bold">100%</p>
                   <p className="text-sm text-muted-foreground">Практика</p>
