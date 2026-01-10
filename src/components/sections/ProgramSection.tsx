@@ -40,8 +40,12 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 sm:p-6 rounded-xl bg-muted/20">
                 <div className="flex flex-col items-center">
-                  <div className="mb-2 text-primary">
-                    <ToolsInHand size={32} />
+                  <div className="mb-2">
+                    <img 
+                      src="https://cdn.poehali.dev/files/freepik__-ai-__18221.png" 
+                      alt="AI инструменты" 
+                      className="w-8 h-8 object-contain"
+                    />
                   </div>
                   <p className="text-2xl font-bold">7</p>
                   <p className="text-sm text-muted-foreground">AI-инструментов</p>
