@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import Icon from '@/components/ui/icon';
+import { Input } from '@/components/ui/input';
 
 const PriceModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    email: ''
+    role: ''
   });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
@@ -30,29 +32,30 @@ const PriceModal = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Отправка в Google Sheets
     try {
-      await fetch('https://script.google.com/macros/s/AKfycbxfqP8e15nIEiFq73P1JOB7F0y3TdWfp6l--hfZHoKaBTIW3mQlvQQXiJRMXKhkL4uW/exec', {
+      const response = await fetch('https://functions.poehali.dev/ac1f715b-f732-4bcd-9475-5c7805a3d158', {
         method: 'POST',
-        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          source: 'Всплывающее окно',
-          timestamp: new Date().toISOString()
+          ...formData,
+          formType: 'module01'
         })
       });
-      
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsOpen(false);
-      }, 2000);
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 2000);
+      } else {
+        alert(result.error || 'Произошла ошибка. Попробуйте еще раз.');
+      }
     } catch (error) {
-      console.error('Ошибка отправки:', error);
+      alert('Ошибка отправки. Проверьте интернет и попробуйте снова.');
     }
   };
 
@@ -108,41 +111,54 @@ const PriceModal = () => {
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <input
-                    type="text"
-                    placeholder="Ваше имя"
+                  <Input
+                    placeholder="ФИО *"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    className="bg-muted/50 border-primary/30"
                   />
                 </div>
                 
                 <div>
-                  <input
+                  <Input
                     type="tel"
-                    placeholder="Телефон"
+                    placeholder="Номер телефона *"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    className="bg-muted/50 border-primary/30"
                   />
                 </div>
 
                 <div>
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  <Input
+                    placeholder="Чем вы занимаетесь? *"
+                    value={formData.role}
+                    onChange={(e) => setFormData({ ...formData, role: e.target.value })}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-border bg-background focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+                    className="bg-muted/50 border-primary/30"
                   />
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <input 
+                    type="checkbox" 
+                    id="modal-terms"
+                    required
+                    checked={agreedToTerms}
+                    onChange={(e) => setAgreedToTerms(e.target.checked)}
+                    className="mt-1 cursor-pointer"
+                  />
+                  <label htmlFor="modal-terms" className="text-xs text-muted-foreground cursor-pointer">
+                    Я ознакомлен(а) с Договором оферты и Политикой конфиденциальности
+                  </label>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-xl transition-all hover:scale-105 shadow-lg"
+                  disabled={!agreedToTerms}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-xl transition-all hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   Забронировать место
                 </button>
