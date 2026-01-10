@@ -29,7 +29,7 @@ const ScrollToTop = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full p-4 shadow-xl transition-all hover:scale-110 animate-in fade-in slide-in-from-bottom-4 duration-300"
+          className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-primary/50 hover:bg-primary/70 text-primary-foreground rounded-full p-4 shadow-xl transition-all hover:scale-110 animate-in fade-in slide-in-from-bottom-4 duration-300 backdrop-blur-sm"
           aria-label="Вернуться наверх"
         >
           <Icon name="Mouse" size={24} />
