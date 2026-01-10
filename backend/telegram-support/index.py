@@ -7,7 +7,7 @@ from typing import Optional
 
 def send_telegram_message(chat_id: int, text: str, parse_mode: str = "HTML") -> bool:
     """Отправка сообщения через Telegram Bot API"""
-    token = os.environ.get('TELEGRAM_BOT_TOKEN')
+    token = os.environ.get('TELEGRAM_SUPPORT_BOT_TOKEN') or os.environ.get('TELEGRAM_BOT_TOKEN')
     if not token:
         return False
     
