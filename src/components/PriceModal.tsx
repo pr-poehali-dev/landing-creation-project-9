@@ -99,18 +99,9 @@ const PriceModal = () => {
                 ⏰ Время ограничено!
               </h3>
 
-              <p className="text-lg mb-2 text-center">
-                Специальная цена <span className="text-primary font-bold text-2xl">-42%</span>
-              </p>
-              
-              <p className="text-muted-foreground mb-6 text-center">
-                действует только до <span className="font-bold text-foreground">1 марта</span>
-              </p>
-
               <div className="bg-primary/5 rounded-xl p-4 mb-6 text-center">
-                <p className="text-sm text-muted-foreground mb-2">Успейте забронировать место по самой выгодной цене:</p>
+                <p className="text-sm text-muted-foreground mb-2">Забронируйте место:</p>
                 <p className="text-3xl font-bold text-primary">35 000 ₽</p>
-                <p className="text-sm text-muted-foreground mt-1">вместо 60 000 ₽</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-4">

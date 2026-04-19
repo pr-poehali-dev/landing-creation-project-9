@@ -47,10 +47,6 @@ const TestimonialsCTAFAQ = ({ placesLeft, onOpenForm }: TestimonialsCTAFAQProps)
               </div>
               <div className="flex flex-wrap items-baseline gap-3 sm:gap-4">
                 <span className="text-3xl sm:text-4xl font-bold text-primary">35 000 ₽</span>
-                <div className="space-y-1">
-                  <span className="text-lg sm:text-xl text-muted-foreground line-through block">60 000 ₽</span>
-                  <Badge variant="outline" className="border-accent text-accent text-xs sm:text-sm">-42% до 1 марта</Badge>
-                </div>
               </div>
               <Button className="w-full bg-primary hover:bg-primary/90 group-hover:pulse-glow text-sm sm:text-base">
                 Записаться сейчас

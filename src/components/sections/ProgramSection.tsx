@@ -122,10 +122,6 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                     <h4 className="text-xs sm:text-sm uppercase tracking-wide text-muted-foreground">Инвестиция в участие</h4>
                     <div className="flex flex-wrap items-baseline gap-3 sm:gap-4">
                       <span className="text-4xl sm:text-5xl font-bold text-primary">35 000 ₽</span>
-                      <div className="space-y-1">
-                        <span className="text-xl sm:text-2xl text-muted-foreground line-through block">60 000 ₽</span>
-                        <Badge variant="outline" className="border-accent text-accent text-xs sm:text-sm">-42% до 1 марта</Badge>
-                      </div>
                     </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm text-accent font-semibold flex-wrap">
                       <Icon name="AlertCircle" size={16} className="animate-pulse" />
