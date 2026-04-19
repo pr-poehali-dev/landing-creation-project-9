@@ -127,10 +127,6 @@ const ProgramSection = ({ placesLeft, onOpenForm }: ProgramSectionProps) => {
                         <Badge variant="outline" className="border-accent text-accent text-xs sm:text-sm">-42% до 1 марта</Badge>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground flex-wrap">
-                      <Icon name="Clock" size={16} className="text-accent animate-pulse" />
-                      <span>Цена вырастет после дедлайна</span>
-                    </div>
                     <div className="flex items-center gap-2 text-xs sm:text-sm text-accent font-semibold flex-wrap">
                       <Icon name="AlertCircle" size={16} className="animate-pulse" />
                       <span>Осталось {placesLeft} мест из 30</span>
