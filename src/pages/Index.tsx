@@ -10,7 +10,7 @@ import SuccessModal from '@/components/modals/SuccessModal';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 const Index = () => {
-  const [placesLeft, setPlacesLeft] = useState(14);
+  const [placesLeft, setPlacesLeft] = useState(7);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
