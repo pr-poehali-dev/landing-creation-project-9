@@ -32,9 +32,9 @@ const TestimonialsCTAFAQ = ({ placesLeft, onOpenForm }: TestimonialsCTAFAQProps)
                   <div className="flex items-start gap-3">
                     <Icon name="Star" size={20} className="text-secondary flex-shrink-0 animate-pulse mt-0.5" />
                     <div>
-                      <h4 className="font-bold text-secondary mb-2 text-sm sm:text-base">Если смотреть честно, предложение неадекватно выгодное.</h4>
+                      <h4 className="font-bold text-secondary mb-2 text-sm sm:text-base">Всё уже включено в стоимость.</h4>
                       <p className="text-xs sm:text-sm text-foreground leading-relaxed">
-                        Всё уже включено: и программа, и баня, и шашлыки, и проживание, и питание. Мы заморочились и сделали формат «приехал — и больше ни о чём не думаешь». Именно поэтому тянуть с оплатой — самое дорогое решение, которое вы можете принять.
+                        И программа, и баня, и шашлыки, и проживание, и питание. Мы заморочились и сделали формат «приехал — и больше ни о чём не думаешь».
                       </p>
                     </div>
                   </div>

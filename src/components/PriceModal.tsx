@@ -95,10 +95,6 @@ const PriceModal = () => {
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold mb-4 text-center">
-                ⏰ Время ограничено!
-              </h3>
-
               <div className="bg-primary/5 rounded-xl p-4 mb-6 text-center">
                 <p className="text-sm text-muted-foreground mb-2">Забронируйте место:</p>
                 <p className="text-3xl font-bold text-primary">35 000 ₽</p>
