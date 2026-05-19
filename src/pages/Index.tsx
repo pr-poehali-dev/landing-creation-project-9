@@ -34,7 +34,7 @@ const Index = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setPlacesLeft(prev => Math.max(15, prev - (Math.random() > 0.7 ? 1 : 0)));
+      setPlacesLeft(prev => Math.max(7, prev - (Math.random() > 0.7 ? 1 : 0)));
     }, 30000);
     return () => clearInterval(interval);
   }, []);
